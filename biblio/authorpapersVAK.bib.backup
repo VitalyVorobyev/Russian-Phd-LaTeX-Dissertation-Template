@@ -1,0 +1,61 @@
+@ARTICLE{mixing,
+  author = {Bondar, A. and Poluektov, A. and Vorobiev, V.},
+  title = {Charm mixing in the model-independent analysis of correlated $D^0\bar D^0$ decays},
+  journal = {Phys. Rev. D},
+  year = {2010},
+  volume = {82},
+  pages = {034033},
+  language = {english}
+}
+
+@ARTICLE{cpv,
+  author = {Bondar, A. and Dolgov, A. and Poluektov, A. and Vorobiev, V.},
+  title = {Effect of direct CP violation in charm on $\gamma$ extraction from $B^{\pm}\to DK^{\pm}$, $D\to K_S^0\pi^+\pi^-$},
+  journal = {Eur. Phys. J C},
+  year = {2013},
+  volume = {73},
+  pages = {2476},
+  language = {english}
+}
+
+@COMMENT{PhysRevD.85.112014}
+@article{belle_gamma_binned_dalitz,
+  title = {First measurement of ${\ensuremath{\phi}}_{3}$ with a model-independent Dalitz plot analysis of 
+           ${B}^{\mathbf{\ifmmode\pm\else\textpm\fi{}}}\ensuremath{\rightarrow}D{K}^{\mathbf{\ifmmode\pm\else\textpm\fi{}}}$, $D\ensuremath{\rightarrow}{K}_{S}^{0}{\ensuremath{\pi}}^{\mathbf{+}}{\ensuremath{\pi}}^{\mathbf{-}}$ 
+           decay},
+  author = {Aihara, H. and Arinstein, K. and Asner, D. M. and Aulchenko, V. and Aushev, T. and Bakich, A. M. 
+            and Belous, K. and Bhuyan, B. and Bischofberger, M. and Bondar, A. and Bonvicini, G. and Bozek, A. 
+            and {etal}},
+  collaboration = {Belle Collaboration},
+  journal = {Phys. Rev. D},
+  volume = {85},
+  issue = {11},
+  pages = {112014},
+  numpages = {17},
+  year = {2012},
+  month = {Jun},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevD.85.112014},
+  url = {http://link.aps.org/doi/10.1103/PhysRevD.85.112014},
+  language = {english}
+}
+
+@COMMENT{PhysRevD.94.052004}
+@article{belle_beta_binned_dalitz,
+  title = {Measurement of the CKM angle ${\ensuremath{\varphi}}_{1}$ in ${B}^{0}\ensuremath{\rightarrow}{\overline{D}}^{(*)0}{h}^{0}$, ${\overline{D}}^{0}\ensuremath{\rightarrow}{K}_{S}^{0}{\ensuremath{\pi}}^{+}{\ensuremath{\pi}}^{-}$ decays with time-dependent binned Dalitz plot analysis},
+  author = {Vorobyev, V. and Adachi, I. and Aihara, H. and Asner, D. M. and Aushev, T. and Ayad, R. and Badhrees, I. 
+            and Bahinipati, S. and Bakich, A. M. and Behera, P. and Bhardwaj, V. and Bhuyan, B. and Biswal, J. 
+            and {etal}},
+  collaboration = {Belle Collaboration},
+  journal = {Phys. Rev. D},
+  volume = {94},
+  issue = {5},
+  pages = {052004},
+  numpages = {15},
+  year = {2016},
+  month = {Sep},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevD.94.052004},
+  url = {http://link.aps.org/doi/10.1103/PhysRevD.94.052004},
+  language = {english}
+}

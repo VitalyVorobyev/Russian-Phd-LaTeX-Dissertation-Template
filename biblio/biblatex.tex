@@ -5,19 +5,36 @@
 %%% Загрузка пакета с основными настройками %%%
 \usepackage[%
 backend=biber,% движок
+maxnames=3,
+minnames=3,
 bibencoding=utf8,% кодировка bib файла
 sorting=none,% настройка сортировки списка литературы
 style=gost-numeric,% стиль цитирования и библиографии (по ГОСТ)
+%style=ieeetr,% стиль цитирования и библиографии (по ГОСТ)
 language=autobib,% получение языка из babel/polyglossia, default: autobib % если ставить autocite или auto, то цитаты в тексте с указанием страницы, получат указание страницы на языке оригинала
 autolang=other,% многоязычная библиография
 clearlang=true,% внутренний сброс поля language, если он совпадает с языком из babel/polyglossia
 defernumbers=true,% нумерация проставляется после двух компиляций, зато позволяет выцеплять библиографию по ключевым словам и нумеровать не из большего списка
 sortcites=true,% сортировать номера затекстовых ссылок при цитировании (если в квадратных скобках несколько ссылок, то отображаться будут отсортированно, а не абы как)
 %doi=false,% Показывать или нет ссылки на DOI
-%isbn=false,% Показывать или нет ISBN
+url=false,
+isbn=false% Показывать или нет ISBN
 ]{biblatex}
 
-
+\DeclareSourcemap{
+  \maps[datatype=bibtex]{
+    \map{
+      \step[fieldsource=Collaboration, match=\regexp{([^,]+)}, fieldset=usera, fieldvalue={The $1 collaboration}, final=true]
+    }
+  }
+}
+\renewbibmacro*{author}{%
+  \iffieldundef{usera}{%
+    \printnames{author}%
+  }{%
+    \printnames{author} (\printfield{usera})%
+  }%
+}%
 
 %http://tex.stackexchange.com/a/141831/79756
 %There is a way to automatically map the language field to the langid field. The following lines in the preamble should be enough to do that.
@@ -59,17 +76,17 @@ sortcites=true,% сортировать номера затекстовых сс
             \perdatasource{biblio/authorpapersVAK.bib}
             \step[fieldset=keywords, fieldvalue={biblioauthorvak,biblioauthor,bibliofull}]
         }
-        \map[overwrite]{ % добавляем ключевые слова, чтобы различать источники
-            \perdatasource{biblio/authorpapers.bib}
-            \step[fieldset=keywords, fieldvalue={biblioauthornotvak,biblioauthor,bibliofull}]
-        }
-        \map[overwrite]{ % добавляем ключевые слова, чтобы различать источники
-            \perdatasource{biblio/authorconferences.bib}
-            \step[fieldset=keywords, fieldvalue={biblioauthorconf,biblioauthor,bibliofull}]
-        }
-%        \map[overwrite]{% стираем значения всех полей series
-%            \step[fieldset=series, null]
+ %       \map[overwrite]{ % добавляем ключевые слова, чтобы различать источники
+ %           \perdatasource{biblio/authorpapers.bib}
+ %           \step[fieldset=keywords, fieldvalue={biblioauthornotvak,biblioauthor,bibliofull}]
+ %       }
+%        \map[overwrite]{ % добавляем ключевые слова, чтобы различать источники
+%            \perdatasource{biblio/authorconferences.bib}
+%            \step[fieldset=keywords, fieldvalue={biblioauthorconf,biblioauthor,bibliofull}]
 %        }
+%               \map[overwrite]{% стираем значения всех полей series
+%           \step[fieldset=series, null]
+%       }
         \map[overwrite]{% перекидываем значения полей howpublished в поля organization для типа online
             \step[typesource=online, fieldsource=howpublished, fieldset=organization, origfieldval, final]
             \step[fieldset=howpublished, null]
@@ -180,8 +197,8 @@ sortcites=true,% сортировать номера затекстовых сс
 %%% Подключение файлов bib %%%
 \addbibresource{biblio/othercites.bib}
 \addbibresource{biblio/authorpapersVAK.bib}
-\addbibresource{biblio/authorpapers.bib}
-\addbibresource{biblio/authorconferences.bib}
+%\addbibresource{biblio/authorpapers.bib}
+%\addbibresource{biblio/authorconferences.bib}
 
 
 %% Счётчик использованных ссылок на литературу, обрабатывающий с учётом неоднократных ссылок

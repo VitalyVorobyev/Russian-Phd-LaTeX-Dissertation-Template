@@ -1,0 +1,543 @@
+% Новые переменные, которые могут использоваться во всём проекте
+\newcommand{\authorbibtitle}{Публикации автора по теме диссертации}
+\newcommand{\fullbibtitle}{Список литературы} % (ГОСТ Р 7.0.11-2011, 4)
+
+\newcommand{\ccbar}{\ensuremath{c\overline{c}}\xspace}
+\newcommand{\nb}{\ensuremath{~\text{нб}}\xspace}
+\newcommand{\pn}{\ensuremath{P^0}\xspace}
+\newcommand{\dn}{\ensuremath{D^0}\xspace}
+\newcommand{\bn}{\ensuremath{B^0}\xspace}
+\newcommand{\hn}{\ensuremath{h^0}\xspace}
+\newcommand{\dbar}{\ensuremath{\overline{D}}\xspace}
+\newcommand{\pbar}{\ensuremath{\overline{P}}\xspace}
+\newcommand{\bbar}{\ensuremath{\overline{B}}\xspace}
+\newcommand{\fbar}{\ensuremath{\overline{f}}\xspace}
+\newcommand{\qbar}{\ensuremath{\overline{q}}\xspace}
+\newcommand{\bbbar}{\ensuremath{B\bbar}\xspace}
+\newcommand{\qqbar}{\ensuremath{q\qbar}\xspace}
+\newcommand{\ddbar}{\ensuremath{D\dbar}\xspace}
+\newcommand{\dnbar}{\ensuremath{\dbar{}^0}\xspace}
+\newcommand{\bnbar}{\ensuremath{\bbar{}^0}\xspace}
+\newcommand{\pnbar}{\ensuremath{\pbar{}^0}\xspace}
+\newcommand{\dstn}{\ensuremath{D^{*0}}\xspace}
+\newcommand{\dstp}{\ensuremath{D^{*+}}\xspace}
+\newcommand{\dstm}{\ensuremath{D^{*-}}\xspace}
+\newcommand{\dstarn}{\ensuremath{D^{(*)0}}\xspace}
+\newcommand{\dstnbar}{\ensuremath{\dbar{}^{*0}}\xspace}
+\newcommand{\dstarnbar}{\ensuremath{\dbar{}^{(*)0}}\xspace}
+\newcommand{\ks}{\ensuremath{K_S^0}\xspace}
+\newcommand{\pip}{\ensuremath{\pi^+}\xspace}
+\newcommand{\pim}{\ensuremath{\pi^-}\xspace}
+\newcommand{\pin}{\ensuremath{\pi^0}\xspace}
+\newcommand{\kstopipi}{\ensuremath{\ks\to\pip\pim}\xspace}
+\newcommand{\cms}{\ensuremath{\textrm{СЦМ}}\xspace}
+
+
+\newcommand{\prm}{\ensuremath{{}^{\prime}}\xspace}
+\newcommand{\pprm}{\ensuremath{{}^{\prime\prime}}\xspace}
+\newcommand{\ppprm}{\ensuremath{{}^{\prime\prime\prime}}\xspace}
+
+\newcommand{\aphi}{\ensuremath{\alpha}\xspace}
+\newcommand{\pphi}{\ensuremath{\beta}\xspace}
+\newcommand{\gphi}{\ensuremath{\gamma}\xspace}
+\newcommand{\sindbeta}{\ensuremath{\sin{2\pphi}}\xspace}
+\newcommand{\cosdbeta}{\ensuremath{\cos{2\pphi}}\xspace}
+%\newcommand{\pphib}{\ensuremath{\varphi_2}\xspace}
+%\newcommand{\pphig}{\ensuremath{\varphi_3}\xspace}
+\newcommand{\pphieff}{\ensuremath{\pphi_{\mathrm{eff}}}\xspace}
+\newcommand{\sindbetaeff}{\ensuremath{\sin{2\pphieff}}\xspace}
+
+\newcommand{\gamb}{\ensuremath{\Gamma_B}\xspace}
+\newcommand{\gamt}{\ensuremath{\Gamma t}\xspace}
+\newcommand{\gamdt}{\ensuremath{\Gamma_Dt}\xspace}
+\newcommand{\gambt}{\ensuremath{\gamb t}\xspace}
+\newcommand{\oxdydtsq}{\ensuremath{\mco\left((\gamdt)^2(x_D+y_D)^2\right)}\xspace}
+\newcommand{\oxdydsq}{\ensuremath{\mco\left(x_D+y_D\right)^2}\xspace}
+\newcommand{\orbxdyd}{\ensuremath{\mco\lbr\rb\lbr x_D+y_D\rbr\rbr}\xspace}
+\newcommand{\emdgd}{\ensuremath{e^{-im_Dt-\frac{\gamdt}{2}}}\xspace}
+\newcommand{\embgb}{\ensuremath{e^{-im_Bt-\frac{\gambt}{2}}}\xspace}
+\newcommand{\emg}{\ensuremath{e^{-imt-\frac{\gamt}{2}}}\xspace}
+
+\newcommand{\lbr}{\ensuremath{\left(}}
+\newcommand{\rbr}{\ensuremath{\right)}}
+
+\newcommand{\rcp}{\ensuremath{r_{\cpconj}}}
+\newcommand{\alcp}{\ensuremath{\alpha_{\cpconj}}}
+    
+\newcommand{\bdk}{\ensuremath{B^{\pm}\to D K^{\pm}}\xspace}
+\newcommand{\bdkp}{\ensuremath{B^+\to D K^+}\xspace}
+\newcommand{\bdnkp}{\ensuremath{B^+\to\dn K^+}\xspace}
+\newcommand{\bdbkp}{\ensuremath{B^+\to\dnbar K^+}\xspace}
+\newcommand{\bdnkm}{\ensuremath{B^-\to\dn K^-}\xspace}
+\newcommand{\bdbkm}{\ensuremath{B^-\to\dnbar K^-}\xspace}
+\newcommand{\bdkm}{\ensuremath{B^-\to D K^-}\xspace}
+\newcommand{\bdcpk}{\ensuremath{B^+\to D_{\cpconj} K^+}\xspace}
+
+\newcommand{\delf}{\ensuremath{\Delta\delta_f}\xspace}
+\newcommand{\deld}{\ensuremath{\Delta\delta_D}\xspace}
+\newcommand{\delb}{\ensuremath{\Delta\delta_B}\xspace}
+\newcommand{\rb}{\ensuremath{r_B}\xspace}
+\newcommand{\rd}{\ensuremath{r_D}\xspace}
+\newcommand{\mbc}{\ensuremath{M_{\mathrm{bc}}}\xspace}
+\newcommand{\de}{\ensuremath{\Delta E}\xspace}
+\newcommand{\dm}{\ensuremath{\Delta m}\xspace}
+\newcommand{\dg}{\ensuremath{\Delta\Gamma}\xspace}
+\newcommand{\debk}{\ensuremath{\left(\Delta E\right)}\xspace}
+
+\newcommand{\br}{\ensuremath{\mathcal{B}}\xspace}
+\newcommand{\dkpi}{\ensuremath{D\to K^+\pi^-}\xspace}
+\newcommand{\dkpbar}{\ensuremath{D\to K^-\pi^+}\xspace}
+
+\newcommand{\dd}{\ensuremath{\mathrm{d}}\xspace}
+\newcommand{\ddlz}{\dd\mpsq\dd\mmsq}
+
+\newcommand{\vckm}{\ensuremath{V_{\mathrm{CKM}}}\xspace}
+\newcommand{\cabang}{\ensuremath{\theta_{\mathrm{C}}}\xspace}
+
+\newcommand{\kspp}{\ensuremath{\ks\pi^+\pi^-}\xspace}
+\newcommand{\kppn}{\ensuremath{K^-\pi^+\pin}\xspace}
+\newcommand{\dkpp}{\ensuremath{D\to\ks\pi^+\pi^-}\xspace}
+\newcommand{\dnkpp}{\ensuremath{\dn\to\ks\pi^+\pi^-}\xspace}
+\newcommand{\dbkpp}{\ensuremath{\dnbar\to\ks\pi^+\pi^-}\xspace}
+\newcommand{\dkspp}{\ensuremath{\dn\to\ks\pi^+\pi^-}\xspace}
+
+\newcommand{\bpdrho}{\ensuremath{B^+\to\dnbar\rho^+}\xspace}
+\newcommand{\bpdstarrho}{\ensuremath{B^+\to\dstarn\rho^+}\xspace}
+\newcommand{\bpdstph}{\ensuremath{B^+\to\dstp\hn}\xspace}
+
+\newcommand{\bmdrho}{\ensuremath{B^-\to\dn\rho^-}\xspace}
+\newcommand{\bmdstpi}{\ensuremath{B^-\to\dstm\pin}\xspace}
+\newcommand{\bmdstrho}{\ensuremath{B^-\to\dstn\rho^-}\xspace}
+\newcommand{\bmdstarrho}{\ensuremath{B^-\to\dstarn\rho^-}\xspace}
+\newcommand{\bmdstph}{\ensuremath{B^-\to\dstm\hn}\xspace}
+
+\newcommand{\etap}{\ensuremath{\eta^{\prime}}\xspace}
+
+\newcommand{\bbdsth}{\ensuremath{\bnbar\to\dstarn\hn}\xspace}
+\newcommand{\bdh}{\ensuremath{\bn\to\dnbar\hn}\xspace}
+\newcommand{\bdnh}{\ensuremath{\bn\to\dn\hn}\xspace}
+\newcommand{\bdsth}{\ensuremath{\bn\to\dstarnbar\hn}\xspace}
+\newcommand{\bdstarh}{\ensuremath{\bn\to\dstnbar\hn}\xspace}
+\newcommand{\bdpi}{\ensuremath{\bn\to\dnbar\pin}\xspace}
+\newcommand{\bdeta}{\ensuremath{\bn\to\dnbar\eta}\xspace}
+%\newcommand{\bdetagg}{\ensuremath{\bn\to\dnbar\eta_{\gamma\gamma}}\xspace}
+\newcommand{\bdetagg}{\ensuremath{\bn\to\dnbar[\gamma\gamma]_{\eta}}\xspace}
+\newcommand{\bdstaretagg}{\ensuremath{\bn\to\dstarnbar[\gamma\gamma]_{\eta}}\xspace}
+\newcommand{\bdetap}{\ensuremath{\bn\to\dnbar\etap}\xspace}
+\newcommand{\bdetappp}{\ensuremath{\bn\to\dnbar[\pi^+\pi^-\pi^0]_{\eta}}\xspace}
+\newcommand{\bdomega}{\ensuremath{\bn\to\dnbar\omega}\xspace}
+\newcommand{\bdstpi}{\ensuremath{\bn\to\dstnbar\pin}\xspace}
+\newcommand{\bdstarpi}{\ensuremath{\bn\to\dstarnbar\pin}\xspace}
+\newcommand{\bdsteta}{\ensuremath{\bn\to\dstnbar\eta}\xspace}
+
+\newcommand{\bdpp}{\ensuremath{\bn\to D\pi^+\pi^-}\xspace}
+\newcommand{\bdbpp}{\ensuremath{\bn\to \dnbar\pi^+\pi^-}\xspace}
+\newcommand{\bbdpp}{\ensuremath{\bnbar\to \dn\pi^+\pi^-}\xspace}
+
+\newcommand{\bpdpi}{\ensuremath{B^{+}\to\dnbar\pi^+}\xspace}
+\newcommand{\bpdk}{\ensuremath{B^{+}\to\dnbar K^+}\xspace}
+
+\newcommand{\dpp}{\ensuremath{\dn\pi^+\pi^-}\xspace}
+\newcommand{\dbpp}{\ensuremath{\dnbar\pi^+\pi^-}\xspace}
+\newcommand{\abdbpp}{\ensuremath{\mca_{\dbpp}}\xspace}
+\newcommand{\abbdpp}{\ensuremath{\overline{\mca}{}_{\dpp}}\xspace}
+
+\newcommand{\ppsi}{\ensuremath{\psi\lbr3770\rbr}\xspace}
+\newcommand{\pppsi}{\ensuremath{\psi\lbr4040\rbr}\xspace}
+
+\newcommand{\dpi}{\ensuremath{\dn\pin}\xspace}
+\newcommand{\dstpi}{\ensuremath{\dstn\pin}\xspace}
+\newcommand{\dsteta}{\ensuremath{\dstn\eta}\xspace}
+\newcommand{\detagg}{\ensuremath{\dn\etasubgg}\xspace}
+\newcommand{\detap}{\ensuremath{\dn\etap}\xspace}
+\newcommand{\detappp}{\ensuremath{\dn\etasubppp}\xspace}
+\newcommand{\domega}{\ensuremath{\dn\omega}\xspace}
+\newcommand{\todstpi}{\ensuremath{\dstn\pin}\xspace}
+\newcommand{\todsteta}{\ensuremath{\dstn\eta}\xspace}
+\newcommand{\etapetapp}{\ensuremath{\etap\to[\gamma\gamma]_{\eta}\pi^+\pi^-}\xspace}
+\newcommand{\dstdpi}{\ensuremath{\dstn\to\dn\pin}\xspace}
+\newcommand{\dbstdbpi}{\ensuremath{\dbar^{*0}\to\dnbar\pin}\xspace}
+
+\newcommand{\dstpdpip}{\ensuremath{\dstp\to\dn\pi^+}\xspace}
+
+\newcommand{\jpsi}{\ensuremath{J/\psi}\xspace}
+\newcommand{\psiss}{\ensuremath{\psi(2S)}\xspace}
+\newcommand{\bjpsiks}{\ensuremath{\bn\to\jpsi\ks}\xspace}
+\newcommand{\bjpsikstar}{\ensuremath{\bn\to\jpsi K^*}\xspace}
+\newcommand{\bpsissks}{\ensuremath{\bn\to\psiss\ks}\xspace}
+\newcommand{\bddks}{\ensuremath{\bn\to D^{(*)}D^{(*)}\ks}\xspace}
+\newcommand{\bsjpsiphi}{\ensuremath{B_s\to \jpsi\varphi}\xspace}
+
+\newcommand{\vud}{\ensuremath{V_{ub}}\xspace}
+\newcommand{\vus}{\ensuremath{V_{us}}\xspace}
+\newcommand{\vub}{\ensuremath{V_{ub}}\xspace}
+
+\newcommand{\vcd}{\ensuremath{V_{cd}}\xspace}
+\newcommand{\vcs}{\ensuremath{V_{cs}}\xspace}
+\newcommand{\vcb}{\ensuremath{V_{cb}}\xspace}
+
+\newcommand{\vtd}{\ensuremath{V_{td}}\xspace}
+\newcommand{\vts}{\ensuremath{V_{ts}}\xspace}
+\newcommand{\vtb}{\ensuremath{V_{tb}}\xspace}
+
+\newcommand{\vudst}{\ensuremath{V_{ub}^*}\xspace}
+\newcommand{\vusst}{\ensuremath{V_{us}^*}\xspace}
+\newcommand{\vubst}{\ensuremath{V_{ub}^*}\xspace}
+
+\newcommand{\vcdst}{\ensuremath{V_{cd}^*}\xspace}
+\newcommand{\vcsst}{\ensuremath{V_{cs}^*}\xspace}
+\newcommand{\vcbst}{\ensuremath{V_{cb}^*}\xspace}
+
+\newcommand{\dedx}{\ensuremath{\mathrm{d}E/\mathrm{d}x}\xspace}
+
+\newcommand{\vtdst}{\ensuremath{V_{td}^*}\xspace}
+\newcommand{\vtsst}{\ensuremath{V_{ts}^*}\xspace}
+\newcommand{\vtbst}{\ensuremath{V_{tb}^*}\xspace}
+
+\newcommand{\mosq}{\ensuremath{m_{12}^2}\xspace}
+\newcommand{\mtsq}{\ensuremath{m_{13}^2}\xspace}
+\newcommand{\mpsq}{\ensuremath{m_+^2}\xspace}
+\newcommand{\mmsq}{\ensuremath{m_-^2}\xspace}
+\newcommand{\mpmsq}{\ensuremath{m_{\pm}^2}\xspace}
+\newcommand{\mmpsq}{\ensuremath{m_{\mp}^2}\xspace}
+\newcommand{\mupsq}{\ensuremath{\mu_+^2}\xspace}
+\newcommand{\mumsq}{\ensuremath{\mu_-^2}\xspace}
+
+\newcommand{\bg}{\ensuremath{\lbr \beta\gamma \rbr}\xspace}
+\newcommand{\cbgups}{\ensuremath{c\bg_{\ups}}\xspace}
+\newcommand{\bgups}{\ensuremath{\bg_{\ups}}\xspace}
+
+\newcommand{\ak}{\ensuremath{a_{\mathrm{k}}}\xspace}
+\newcommand{\ck}{\ensuremath{c_{\mathrm{k}}}\xspace}
+
+\newcommand{\albf}{\ensuremath{\boldsymbol{\alpha}}\xspace}
+\newcommand{\vbf}{\ensuremath{\mathbf{v}}\xspace}
+\newcommand{\Hbf}{\ensuremath{\mathbf{H}}\xspace}
+\newcommand{\Vbf}{\ensuremath{\mathbf{V}}\xspace}
+
+\newcommand{\detr}{\ensuremath{\mathrm{detr}}\xspace}
+\newcommand{\np}{\ensuremath{\mathrm{np}}\xspace}
+\newcommand{\kin}{\ensuremath{\mathrm{k}}\xspace}
+
+\newcommand{\rmq}{\ensuremath{\mathrm{q}}\xspace}
+\newcommand{\rmp}{\ensuremath{\mathrm{p}}\xspace}
+\newcommand{\rmn}{\ensuremath{\mathrm{n}}\xspace}
+
+\newcommand{\motsq}{\ensuremath{\lbr\mosq,\mtsq\rbr}\xspace}
+\newcommand{\mottsq}{\ensuremath{\lbr\mosq,\mtsq,t\rbr}\xspace}
+
+\newcommand{\dt}{\ensuremath{\Delta t}\xspace}
+\newcommand{\dz}{\ensuremath{\Delta z}\xspace}
+\newcommand{\dtp}{\ensuremath{\Delta t^{\prime}}\xspace}
+\newcommand{\dtpp}{\ensuremath{\Delta t^{\prime\prime}}\xspace}
+\newcommand{\dtppp}{\ensuremath{\Delta t^{\prime\prime\prime}}\xspace}
+\newcommand{\dtj}{\ensuremath{\Delta t_{j}}\xspace}
+
+\newcommand{\btoccq}{\ensuremath{b\to c\overline{c}q}\xspace}
+\newcommand{\btoccs}{\ensuremath{b\to c\overline{c}s}\xspace}
+\newcommand{\btoqqs}{\ensuremath{b\to q\overline{q}s}\xspace}
+\newcommand{\btosss}{\ensuremath{b\to s\overline{s}s}\xspace}
+\newcommand{\btossd}{\ensuremath{b\to s\overline{s}d}\xspace}
+\newcommand{\btodds}{\ensuremath{b\to d\overline{d}s}\xspace}
+\newcommand{\btoddd}{\ensuremath{b\to d\overline{d}d}\xspace}
+\newcommand{\btocud}{\ensuremath{b\to c\overline{u}d}\xspace}
+\newcommand{\btoucd}{\ensuremath{b\to u\overline{c}d}\xspace}
+\newcommand{\btouud}{\ensuremath{b\to u\overline{u}d}\xspace}
+\newcommand{\btouus}{\ensuremath{b\to u\overline{u}s}\xspace}
+\newcommand{\btouuq}{\ensuremath{b\to u\overline{u}q}\xspace}
+\newcommand{\btocus}{\ensuremath{b\to c\overline{u}s}\xspace}
+\newcommand{\btoucs}{\ensuremath{b\to u\overline{c}s}\xspace}
+
+\newcommand{\stat}{\ensuremath{\left({\textrm{стат}.}\right)}\xspace}
+\newcommand{\syst}{\ensuremath{\left({\textrm{сист}.}\right)}\xspace}
+
+\newcommand{\substat}{\ensuremath{{}_{\mathrm{stat}}}\xspace}
+\newcommand{\subsyst}{\ensuremath{{}_{\mathrm{syst}}}\xspace}
+
+\newcommand{\ep}{\ensuremath{e^+e^-}\xspace}
+\newcommand{\vecp}{\ensuremath{\mathbf{p}}\xspace}
+
+\newcommand{\cbfcn}{\ensuremath{G_{\mathrm{CB}}}\xspace}
+\newcommand{\nskfcn}{\ensuremath{G_{\mathrm{Nsk}}}\xspace}
+\newcommand{\erf}{\ensuremath{G_{\mathrm{erf}}}\xspace}
+
+\newcommand{\thhel}{\ensuremath{\theta_{\mathrm{hel}}}\xspace}
+\newcommand{\ththr}{\ensuremath{\theta_{\mathrm{thr}}}\xspace}
+
+\newcommand{\mco}{\ensuremath{\mathcal{O}}\xspace}
+\newcommand{\mcr}{\ensuremath{\mathcal{R}}\xspace}
+\newcommand{\mcd}{\ensuremath{\mathcal{D}}\xspace}
+\newcommand{\mcl}{\ensuremath{\mathcal{L}}\xspace}
+\newcommand{\mck}{\ensuremath{\mathcal{K}}\xspace}
+\newcommand{\mca}{\ensuremath{\mathcal{A}}\xspace}
+\newcommand{\mcb}{\ensuremath{\mathcal{B}}\xspace}
+\newcommand{\mcn}{\ensuremath{\mathcal{N}}\xspace}
+\newcommand{\mcp}{\ensuremath{\mathcal{P}}\xspace}
+\newcommand{\mcs}{\ensuremath{\mathcal{S}}\xspace}
+\newcommand{\mcabar}{\ensuremath{\overline{\mca}}\xspace}
+\newcommand{\mcpbar}{\ensuremath{\overline{\mcp}}\xspace}
+\newcommand{\acp}{\ensuremath{\mca_\cpconj}\xspace}
+\newcommand{\mcm}{\ensuremath{\mathcal{M}}\xspace}
+\newcommand{\mcmbar}{\ensuremath{\overline{\mcm}}\xspace}
+
+\newcommand{\mcpd}{\ensuremath{\mcp_D}\xspace}
+\newcommand{\mcpdbar}{\ensuremath{\mcpbar_D}\xspace}
+
+\newcommand{\ndf}{\ensuremath{\mathrm{n.d.f.}}\xspace}
+
+\newcommand{\ad}{\ensuremath{\mca_D}}
+\newcommand{\adbar}{\ensuremath{\mcabar_D}}
+\newcommand{\dvar}{\ensuremath{\left(\mpsq,\mmsq\right)}\xspace}
+\newcommand{\dvarinv}{\ensuremath{\left(\mmsq,\mpsq\right)}\xspace}
+\newcommand{\advar}{\ensuremath{\ad\dvar}\xspace}
+\newcommand{\advarinv}{\ensuremath{\ad\dvarinv}\xspace}
+\newcommand{\advarinvconj}{\ensuremath{\mca^{*}_D\dvarinv}\xspace}
+\newcommand{\adsq}{\ensuremath{\left|\ad\right|^2}\xspace}
+\newcommand{\advarsq}{\ensuremath{\left|\ad\dvar)\right|^2}\xspace}
+\newcommand{\advarinvsq}{\ensuremath{\left|\ad\dvarinv\right|^2}\xspace}
+
+\newcommand{\pd}{\ensuremath{\mcp_D}}
+\newcommand{\pdbar}{\ensuremath{\mcpbar_D}}
+
+\newcommand{\ads}{\textrm{ADS}}
+\newcommand{\glw}{\textrm{GLW}}
+
+\newcommand{\imag}{\ensuremath{\mathrm{Im}}}
+
+\newcommand{\ab}{\ensuremath{\mca_B}}
+\newcommand{\abbar}{\ensuremath{\mcabar_B}}
+\newcommand{\af}{\ensuremath{\mca_f}\xspace}
+\newcommand{\afbar}{\ensuremath{\mcabar{}_f}\xspace}
+\newcommand{\bvar}{\ensuremath{\left(\mupsq,\mumsq\right)}\xspace}
+\newcommand{\bvarinv}{\ensuremath{\left(\mumsq,\mupsq\right)}\xspace}
+
+\newcommand{\ddlzarea}{\ensuremath{\limits_{\mcd_i}}\xspace}
+
+\newcommand{\cpconj}{\ensuremath{\mathcal{CP}}\xspace}
+\newcommand{\pconj}{\ensuremath{\mathcal{P}}\xspace}
+\newcommand{\cconj}{\ensuremath{\mathcal{C}}\xspace}
+\newcommand{\tconj}{\ensuremath{\mathcal{T}}\xspace}
+\newcommand{\cpvconj}{\ensuremath{\mathcal{CPV}}\xspace}
+\newcommand{\cptconj}{\ensuremath{\mathcal{CPT}}\xspace}
+
+\newcommand{\bz}{\ensuremath{\left|\bn\right>}\xspace}
+\newcommand{\bzb}{\ensuremath{\left|\bnbar\right>}\xspace}
+\newcommand{\ba}{\ensuremath{\left|B_H\right>}\xspace}
+\newcommand{\bb}{\ensuremath{\left|B_L\right>}\xspace}
+
+\newcommand{\rmh}{\ensuremath{\mathrm{H}}\xspace}
+\newcommand{\rml}{\ensuremath{\mathrm{L}}\xspace}
+
+\newcommand{\pz}{\ensuremath{\left|\pn\right>}\xspace}
+\newcommand{\pzb}{\ensuremath{\left|\pnbar\right>}\xspace}
+\newcommand{\pa}{\ensuremath{\left|P_{\rmh}\right>}\xspace}
+\newcommand{\pb}{\ensuremath{\left|P_{\rml}\right>}\xspace}
+
+\newcommand{\bzt}{\ensuremath{\left|\bn\left(t\right)\right>}\xspace}
+\newcommand{\bzbt}{\ensuremath{\left|\bnbar\left(t\right)\right>}\xspace}
+\newcommand{\bzta}{\ensuremath{\left|\bn\left(t_1\right)\right>}\xspace}
+\newcommand{\bztb}{\ensuremath{\left|\bn\left(t_2\right)\right>}\xspace}
+\newcommand{\bzbta}{\ensuremath{\left|\bnbar\left(t_1\right)\right>}\xspace}
+\newcommand{\bzbtb}{\ensuremath{\left|\bnbar\left(t_2\right)\right>}\xspace}
+\newcommand{\bat}{\ensuremath{\left|B_{\rmh}\left(t\right)\right>}\xspace}
+\newcommand{\bbt}{\ensuremath{\left|B_{\rml}\left(t\right)\right>}\xspace}
+
+\newcommand{\pzt}{\ensuremath{\left|\pn\left(t\right)\right>}\xspace}
+\newcommand{\pzbt}{\ensuremath{\left|\pnbar\left(t\right)\right>}\xspace}
+\newcommand{\pzta}{\ensuremath{\left|\pn\left(t_1\right)\right>}\xspace}
+\newcommand{\pztb}{\ensuremath{\left|\pn\left(t_2\right)\right>}\xspace}
+\newcommand{\pzbta}{\ensuremath{\left|\pnbar\left(t_1\right)\right>}\xspace}
+\newcommand{\pzbtb}{\ensuremath{\left|\pnbar\left(t_2\right)\right>}\xspace}
+\newcommand{\pat}{\ensuremath{\left|P_{\rmh}\left(t\right)\right>}\xspace}
+\newcommand{\pbt}{\ensuremath{\left|P_{\rml}\left(t\right)\right>}\xspace}
+
+\newcommand{\bzti}{\ensuremath{\left|\bn\left(0\right)\right>}\xspace}
+\newcommand{\bzbti}{\ensuremath{\left|\bnbar\left(0\right)\right>}\xspace}
+\newcommand{\bati}{\ensuremath{\left|B_{\rmh}\left(0\right)\right>}\xspace}
+\newcommand{\bbti}{\ensuremath{\left|B_{\rml}\left(0\right)\right>}\xspace}
+
+\newcommand{\pzti}{\ensuremath{\left|\pn\left(0\right)\right>}\xspace}
+\newcommand{\pzbti}{\ensuremath{\left|\pnbar\left(0\right)\right>}\xspace}
+\newcommand{\pati}{\ensuremath{\left|P_{\rmh}\left(0\right)\right>}\xspace}
+\newcommand{\pbti}{\ensuremath{\left|P_{\rml}\left(0\right)\right>}\xspace}
+
+\newcommand{\kapp}{\ensuremath{\varkappa\left(t\right)}\xspace}
+\newcommand{\sigm}{\ensuremath{\sigma\left(t\right)}\xspace}
+
+\newcommand{\kappb}{\ensuremath{\varkappa_B\left(t\right)}\xspace}
+\newcommand{\sigmb}{\ensuremath{\sigma_B\left(t\right)}\xspace}
+
+\newcommand{\kappd}{\ensuremath{\varkappa_D\left(t\right)}\xspace}
+\newcommand{\sigmd}{\ensuremath{\sigma_D\left(t\right)}\xspace}
+
+\newcommand{\rec}{\ensuremath{\mathrm{rec}}\xspace}
+\newcommand{\asc}{\ensuremath{\mathrm{asc}}\xspace}
+
+\newcommand{\bs}{\ensuremath{B_s^0}\xspace}
+
+\newcommand{\ups}{\ensuremath{\Upsilon\left(4S\right)}\xspace}
+\newcommand{\brec}{\ensuremath{B_{\rec}}\xspace}
+\newcommand{\basc}{\ensuremath{B_{\asc}}\xspace}
+\newcommand{\thrrec}{\ensuremath{\mathbf{T}_{\rec}}\xspace}
+\newcommand{\thrasc}{\ensuremath{\mathbf{T}_{\asc}}\xspace}
+
+\newcommand{\epseff}{\ensuremath{\varepsilon_{\mathrm{eff}}}\xspace}
+
+\newcommand{\kapdt}{\ensuremath{\varkappa\left(\dt\right)}\xspace}
+\newcommand{\sigdt}{\ensuremath{\sigma\left(\dt\right)}\xspace}
+
+\newcommand{\hgg}{\ensuremath{\hn\to\gamma\gamma}\xspace}
+\newcommand{\pigg}{\ensuremath{\pin\to\gamma\gamma}\xspace}
+\newcommand{\dst}{\ensuremath{D^{*}(2007)^0}\xspace}
+\newcommand{\etagg}{\ensuremath{\eta\to\gamma\gamma}\xspace}
+\newcommand{\etasubgg}{\ensuremath{{[\gamma\gamma]}_{\eta}}\xspace}
+\newcommand{\hppp}{\ensuremath{\hn\to\pi^+\pi^-\pi^0}\xspace}
+\newcommand{\etappp}{\ensuremath{\eta\to\pi^+\pi^-\pi^0}\xspace}
+\newcommand{\etasubppp}{\ensuremath{{[\pi^+\pi^-\pi^0]}_{\eta}}\xspace}
+\newcommand{\omegappp}{\ensuremath{\omega\to\pi^+\pi^-\pi^0}\xspace}
+\newcommand{\omegasubppp}{\ensuremath{\omega_{\pi^+\pi^-\pi^0}}\xspace}
+
+\newcommand{\ifb}{\ensuremath{~\textrm{фб}^{-1}}\xspace}
+\newcommand{\mev}{\ensuremath{~\textrm{МэВ}}\xspace}
+\newcommand{\gev}{\ensuremath{~\textrm{ГэВ}}\xspace}
+\newcommand{\mevc}{\ensuremath{\mev/c}\xspace}
+\newcommand{\gevc}{\ensuremath{\gev/c}\xspace}
+\newcommand{\mevcsq}{\ensuremath{\mevc^{2}}\xspace}
+\newcommand{\gevcsq}{\ensuremath{\gevc^{2}}\xspace}
+\newcommand{\cm}{\ensuremath{~\textrm{см}}\xspace}
+\newcommand{\sec}{\ensuremath{~\textrm{с}}\xspace}
+\newcommand{\gz}{\ensuremath{~\textrm{Гц}}\xspace}
+
+\newcommand{\argus}{\ensuremath{p_{\mathrm{Argus}}}\xspace}
+\newcommand{\cheb}{\ensuremath{T_2}\xspace}
+
+\newcommand{\lab}{\ensuremath{\mathrm{lab}}\xspace}
+
+\newcommand{\sig}{\ensuremath{\mathrm{sig}}\xspace}
+\newcommand{\cnt}{\ensuremath{\mathrm{cnt}}\xspace}
+\newcommand{\cmb}{\ensuremath{\mathrm{cmb}}\xspace}
+\newcommand{\bkg}{\ensuremath{\mathrm{bkg}}\xspace}
+\newcommand{\tot}{\ensuremath{\mathrm{tot}}\xspace}
+\newcommand{\gen}{\ensuremath{\mathrm{gen}}\xspace}
+
+\newcommand{\expr}{\ensuremath{\mathrm{exp}}\xspace}
+\newcommand{\nuis}{\ensuremath{\mathrm{nuis}}\xspace}
+
+\newcommand{\subsig}{\ensuremath{{}_{\sig}}\xspace}
+\newcommand{\subcnt}{\ensuremath{{}_{\cnt}}\xspace}
+\newcommand{\subcmb}{\ensuremath{{}_{\cmb}}\xspace}
+\newcommand{\subbkg}{\ensuremath{{}_{\bkg}}\xspace}
+\newcommand{\subtot}{\ensuremath{{}_{\tot}}\xspace}
+
+\newcommand{\peak}{\ensuremath{\mathrm{peak}}\xspace}
+\newcommand{\main}{\ensuremath{\mathrm{main}}\xspace}
+\newcommand{\tail}{\ensuremath{\mathrm{tail}}\xspace}
+\newcommand{\subpeak}{\ensuremath{{}_{\peak}}\xspace}
+\newcommand{\subtail}{\ensuremath{{}_{\tail}}\xspace}
+
+\newcommand{\psig}{\ensuremath{p\subsig}\xspace}
+\newcommand{\isig}{\ensuremath{I\subsig}\xspace}
+\newcommand{\nsig}{\ensuremath{N\subsig}\xspace}
+\newcommand{\fsig}{\ensuremath{f\subsig}\xspace}
+\newcommand{\fsigj}{\ensuremath{f_{{\mathrm{sig}},j}}\xspace}
+
+\newcommand{\fqqj}{\ensuremath{f_{{\mathrm{qq}},j}}\xspace}
+
+\newcommand{\pcnt}{\ensuremath{p\subcnt}\xspace}
+\newcommand{\icnt}{\ensuremath{I\subcnt}\xspace}
+\newcommand{\ncnt}{\ensuremath{N\subcnt}\xspace}
+\newcommand{\fcnt}{\ensuremath{f\subcnt}\xspace}
+
+\newcommand{\pcmb}{\ensuremath{p\subcmb}\xspace}
+\newcommand{\icmb}{\ensuremath{I\subcmb}\xspace}
+\newcommand{\ncmb}{\ensuremath{N\subcmb}\xspace}
+\newcommand{\fcmb}{\ensuremath{f\subcmb}\xspace}
+
+\newcommand{\ppeak}{\ensuremath{p\subpeak}\xspace}
+\newcommand{\ipeak}{\ensuremath{I\subpeak}\xspace}
+\newcommand{\npeak}{\ensuremath{N\subpeak}\xspace}
+\newcommand{\fpeak}{\ensuremath{f\subpeak}\xspace}
+
+\newcommand{\tbkg}{\ensuremath{\tau\subbkg}\xspace}
+
+\newcommand{\ntot}{\ensuremath{N\subtot}\xspace}
+\newcommand{\nbkg}{\ensuremath{N\subbkg}\xspace}
+\newcommand{\pbkg}{\ensuremath{p\subbkg}\xspace}
+\newcommand{\fbkg}{\ensuremath{f\subbkg}\xspace}
+\newcommand{\fbkgj}{\ensuremath{f_{{\mathrm{bkg}},j}}\xspace}
+
+\newcommand{\rphi}{\ensuremath{r\varphi}\xspace}
+\newcommand{\pt}{\ensuremath{p_{\mathrm{T}}}\xspace}
+\newcommand{\pl}{\ensuremath{p_{\mathrm{L}}}\xspace}
+
+\newcommand{\csit}{\ensuremath{\mathrm{CsI}(\mathrm{Tl})}\xspace}
+\newcommand{\sdsp}{\ensuremath{\textrm{МФОС}}\xspace}
+\newcommand{\fpga}{\ensuremath{\textrm{ППВМ}}\xspace}
+
+\newcommand{\svd}{\ensuremath{\textrm{КВД}}\xspace}
+\newcommand{\cdc}{\ensuremath{\textrm{ЦДК}}\xspace}
+\newcommand{\acc}{\ensuremath{\textrm{АЧС}}\xspace}
+\newcommand{\tof}{\ensuremath{\textrm{ВПС}}\xspace}
+\newcommand{\ecl}{\ensuremath{\textrm{ЭМК}}\xspace}
+\newcommand{\klm}{\ensuremath{\textrm{МС}}\xspace}
+\newcommand{\efc}{\ensuremath{\textrm{КМУ}}\xspace}
+\newcommand{\gdl}{\ensuremath{\textrm{ГЛР}}\xspace}
+\newcommand{\daq}{\ensuremath{\textrm{ССБ}}\xspace}
+\newcommand{\ps}{\ensuremath{\textrm{пс}}\xspace}
+\newcommand{\mum}{\ensuremath{\textrm{мкм}}\xspace}
+
+\newcommand{\fit}{\ensuremath{\mathrm{fit}}\xspace}
+\newcommand{\true}{\ensuremath{\mathrm{true}}\xspace}
+
+\newcommand{\ckm}{\ensuremath{\textrm{ККМ}}\xspace}
+\newcommand{\km}{\ensuremath{\textrm{КМ}}\xspace}
+\newcommand{\ut}{\ensuremath{\textrm{ТУ}}\xspace}
+
+\newcommand{\ki}{\ensuremath{K_i}\xspace}
+\newcommand{\kmi}{\ensuremath{K_{-i}}\xspace}
+\newcommand{\kj}{\ensuremath{K_j}\xspace}
+\newcommand{\kmj}{\ensuremath{K_{-j}}\xspace}
+\newcommand{\kpmi}{\ensuremath{K_{\pm i}}\xspace}
+\newcommand{\kmpi}{\ensuremath{K_{\mp i}}\xspace}
+\newcommand{\ci}{\ensuremath{C_i}\xspace}
+\newcommand{\cj}{\ensuremath{C_j}\xspace}
+\newcommand{\zi}{\ensuremath{Z_i}\xspace}
+\newcommand{\cmi}{\ensuremath{C_{-i}}\xspace}
+\newcommand{\si}{\ensuremath{S_i}\xspace}
+\newcommand{\sj}{\ensuremath{S_j}\xspace}
+\newcommand{\smi}{\ensuremath{S_{-i}}\xspace}
+
+\newcommand{\kb}{\ensuremath{\overline{K}}\xspace}
+\newcommand{\kbi}{\ensuremath{\kb_{i}}\xspace}
+\newcommand{\kbj}{\ensuremath{\kb_{j}}\xspace}
+
+\newcommand{\dmb}{\ensuremath{\Delta m_B}\xspace}
+\newcommand{\dmdt}{\ensuremath{\left(\dmb\dt\right)}\xspace}
+\newcommand{\dmdthalf}{\ensuremath{\left(\frac{\dmb\dt}{2}\right)}\xspace}
+\newcommand{\dmt}{\ensuremath{\left(\dmb t\right)}\xspace}
+\newcommand{\dmthalf}{\ensuremath{\left(\frac{\dmb t}{2}\right)}\xspace}
+
+\newcommand{\btau}{\ensuremath{\tau_B}\xspace}
+\newcommand{\dtau}{\ensuremath{\tau_D}\xspace}
+\newcommand{\bexp}{\ensuremath{e^{-\frac{\left|\dt\right|}{\btau}}}\xspace}
+\newcommand{\bexpp}{\ensuremath{e^{-\frac{\left|\dtp\right|}{\btau}}}\xspace}
+%\newcommand{\dexp}{\ensuremath{e^{-\frac{t}{\dtau}}}\xspace}
+\newcommand{\dexp}{\ensuremath{e^{-\Gamma_D t}}\xspace}
+\newcommand{\lamfmsq}{\ensuremath{\left|\lambda_f\right|^2}\xspace}
+\newcommand{\lamf}{\ensuremath{\lambda_f}\xspace}
+
+\newcommand{\grad}{\ensuremath{^{\circ}}\xspace}
+\newcommand{\ptopbar}{\ensuremath{\pn\leftrightarrow\pnbar}\xspace}
+\newcommand{\dtodbar}{\ensuremath{\dn\leftrightarrow\dnbar}\xspace}
+\newcommand{\btobbar}{\ensuremath{\bn\leftrightarrow\bnbar}\xspace}
+
+\newcommand{\kipr}{\ensuremath{\ki^{\prime}}\xspace}
+\newcommand{\kmipr}{\ensuremath{\kmi^{\prime}}\xspace}
+\newcommand{\sqkpkp}{\ensuremath{\sqrt{\kipr\kmipr}}\xspace}
+\newcommand{\kppkpovkpkp}{\ensuremath{\frac{\kipr+\kmipr}{\sqkpkp}}\xspace}
+\newcommand{\kpmkpovkpkp}{\ensuremath{\frac{\kipr-\kmipr}{\sqkpkp}}\xspace}
+
+\newcommand{\cipr}{\ensuremath{\ci^{\prime}}\xspace}
+\newcommand{\sipr}{\ensuremath{\si^{\prime}}\xspace}
+
+\newcommand{\belleii}{Belle\:II\xspace}

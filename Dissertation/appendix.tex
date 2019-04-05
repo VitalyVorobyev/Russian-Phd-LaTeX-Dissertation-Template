@@ -1,429 +1,416 @@
 \input{Dissertation/appendixsetup}   % Предварительные настройки для правильного подключения Приложений
-\chapter{Примеры вставки листингов программного кода} \label{AppendixA}
+\chapter{Формализм с учетом CP-нарушения в смешивании D-мезонов} \label{app:full_formalism}
+Обозначим амплитуду перехода \dn (\dnbar) в конечное состояние $f$ через \ad\ (\adbar).  В случае распада в три бесспиновые частицы, амплитуда \dn зависит от двух кинематических параметров.  Мы будем использовать переменные Далица \mosq и \mtsq.  Плотность распределения Далица для распада \dn в отсутствие осцилляций $D$-мезонов равна
+\begin{equation}
+ \mcp\motsq = \left |\ad\motsq\right |^2.
+\end{equation}
+Учет осцилляции $D$-мезонов изменяет это выражение следующим образом:
+\begin{equation}\label{eq:pd}
+  \mcp^{\prime}\mottsq = 
+    \left |\kappd\ad + i\frac{q}{p}\sigmd \adbar\right |^2, 
+\end{equation}
+где $t$ обозначает время между рождением и распадом.  Зависимость \ad\ и \adbar\ от переменных Далица в уравнении~\eqref{eq:pd} опущена.  Временная зависимость задается выражением
+\begin{equation}\label{eq:kapsig}
+   \kappd + i\sigmd = e^{\frac{\gamdt}{2}(-1+x_D-iy_D)}. 
+\end{equation}
+Проинтегрировав выражение~\eqref{eq:kapsig} по времени, получим
+\begin{equation}
+ \mcp^{\prime}\motsq=a_0\mcp + a_1r^{2}_{\cpconj}\mcpbar +
+                r_{\cpconj}\sqrt{\mcp\mcpbar}\left (C^+a_2+S^+a_3\right ),
+\end{equation}
+где
+\begin{equation}
+ r_{\cpconj}e^{i\alpha_{\cpconj}}=\frac{q}{p},\quad C^{\pm} + iS^{\pm} = e^{i\lbr\deld\pm\alpha_{\cpconj}\rbr},
+\end{equation}
+$\deld=\lbr\delta_D\motsq-\overline{\delta}_D\motsq\rbr$ --- разность сильных фаз между амплитудами распадов $D^0\to f$ и $\dnbar\to f$ и
+\begin{equation}
+  \begin{split}
+   a_0&=\frac{1}{2}\left (\frac{1}{1-y_D^2}+\frac{1}{1+x_D^2}\right )
+      =1+\frac{1}{2}\left (-x_D^2+y_D^2\right )+\mco\lbr x_D+y_D\rbr^3,\\
+   a_1&=\frac{1}{2}\left (\frac{1}{1-y_D^2}-\frac{1}{1+x_D^2}\right )
+      =\frac{1}{2}\left (x_D^2+y_D^2\right )+\mco\lbr x_D+y_D\rbr^3,\\
+   a_2&=\frac{y_D}{1-y_D^2}=y_D+\mco\lbr x_D+y_D\rbr^3,\\
+   a_3&=\frac{x_D}{1+x_D^2}=x_D+\mco\lbr x_D+y_D\rbr^3.
+  \end{split}
+ \end{equation}
+Соответствующие выражения для распадов \dnbar могут быть получены посредством подстановок
+$p\leftrightarrow q$ и $\mcp \leftrightarrow \mcpbar$:
+\begin{equation}
+ \mcpbar^{\prime}\motsq=a_0\mcpbar + a_1r^{-2}_{\cpconj}\mcp +
+                r^{-1}_{\cpconj}\sqrt{\mcp\mcpbar}\lbr C^-a_2+S^-a_3\rbr.
+\end{equation}
 
-Для крупных листингов есть два способа. Первый красивый, но в нём могут быть проблемы с поддержкой кириллицы (у вас может встречаться в комментариях и
-печатаемых сообщениях), он представлен на листинге~\ref{list:hwbeauty}.
-%\renewcommand\FBbskip{-20pt} % если хотим притянуть что-то к плавающему окружению из floatrow
-\begin{ListingEnv}[H]% буква H означает Here, ставим здесь,
-    % элементы, которые нежелательно разрывать обычно не ставят
-    % посреди страницы: вместо H используется t (top, сверху страницы),
-    % или b (bottom) или p (page, на отдельной странице)
-%    \captionsetup{format=tablenocaption}% должен стоять до самого caption
-%    \thisfloatsetup{\capposition=top}%
-    \caption{Программа “Hello, world” на \protect\cpp}
-    % далее метка для ссылки:
-    \label{list:hwbeauty}
-    % окружение учитывает пробелы и табляции и приеняет их в сответсвии с настройкми
-    \begin{lstlisting}[language={[ISO]C++}]
-	#include <iostream>
-	using namespace std;
+Рассмотрим теперь распад пары $\dn\dnbar$, находящейся в когерентном состоянии с $\cconj=-1$ или $\cconj=+1$.  В предположении, что частица с индексом $1$ распадается первой, плотность распределения Далица с учетом осцилляций $D$-мезонов задается выражением
+\begin{equation}
+ \begin{split}
+  \mcp_{\mathrm{corr}}^{\cconj}&\lbr\lbr\mosq\rbr_1,\lbr\mtsq\rbr_1,\lbr\mosq\rbr_2,\lbr\mtsq\rbr_2\rbr \\
+   & = b^\cconj_0\left [\mcp_1\mcpbar_2+\mcpbar_1\mcp_2 
+     + 2 \cconj \sqrt{\mcp_1\mcpbar_1\mcp_2\mcpbar_2}\lbr C_1C_2+S_1S_2\rbr\right ]     \\
+   & + b^\cconj_1\left [\rcp^{-2}\mcp_1\mcp_2+\rcp^2\mcpbar_1\mcpbar_2 
+     + 2\cconj\sqrt{\mcp_1\mcpbar_1\mcp_2\mcpbar_2}\lbr C^+_1C^+_2-S^+_1S^+_2\rbr\right ]\\
+   & + b^\cconj_2\left [\sqrt{\mcp_2\mcpbar_2}C^+_2\lbr\rcp\mcpbar_1+\rcp^{-1}\mcp_1\rbr
+     + \cconj\sqrt{\mcp_1\mcpbar_1}C^+_1\lbr\rcp\mcpbar_2+\rcp^{-1}\mcp_2\rbr\right ]   \\
+   & + b^\cconj_3\left[\sqrt{\mcp_2\mcpbar_2}S^+_2\lbr\rcp\mcpbar_1-\rcp^{-1}\mcp_1\rbr
+     + \cconj\sqrt{\mcp_1\mcpbar_1}S^+_1\lbr\rcp\mcpbar_2-\rcp^{-1}\mcp_2\rbr\right ],
+  \end{split}
+\end{equation}
+где
+\begin{equation}
+ \begin{split}
+  b_0^\cconj&=\frac{1}{2}\left [\frac{1+\cconj y_D^2}{\lbr 1-y_D^2\rbr^2}+\frac{1-\cconj x_D^2}{\lbr 1+x_D^2\rbr^2}\right ]
+  \approx a_0+\frac{\cconj+1}{2}\lbr -x_D^2+y_D^2\rbr,\\
+  b_1^\cconj&=\frac{1}{2}\left [\frac{1+\cconj y_D^2}{\lbr 1-y_D^2\rbr^2}-\frac{1-\cconj x_D^2}{\lbr 1+x_D^2\rbr^2}\right ]
+  \approx \lbr\cconj+2\rbr a_1,\\
+  b_2^\cconj&=\frac{\lbr 1+\cconj\rbr y_D}{\lbr 1-y_D^2\rbr^2}\approx\lbr 1+\cconj\rbr a_2,\\
+  b_3^\cconj&=\frac{\lbr 1+\cconj\rbr x_D}{\lbr 1+x_D^2\rbr^2}\approx\lbr 1+\cconj\rbr a_3,
+ \end{split}
+\end{equation}
+и $\cconj=\pm 1$ для симметричного и антисимметричного случаев.  Заметим, что интерференционные члены сокращаются в случае  $\cconj=-1$ и удваиваются (по сравнению со случаем некогерентного распада) в случае $\cconj=+1$.
 
-	int main() //кириллица в комментариях при xelatex и lualatex имеет проблемы с пробелами
-	{
-		cout << "Hello, world" << endl; //latin letters in commentaries
-		system("pause");
-		return 0;
-	}
-    \end{lstlisting}
-\end{ListingEnv}%
-Второй не такой красивый, но без ограничений (см.~листинг~\ref{list:hwplain}).
-\begin{ListingEnv}[H]
-    \begin{Verb}
-        
-        #include <iostream>
-        using namespace std;
-        
-        int main() //кириллица в комментариях
-        {
-            cout << "Привет, мир" << endl;
-        }
-    \end{Verb}
-    \caption{Программа “Hello, world” без подсветки}
-    \label{list:hwplain}
-\end{ListingEnv}
+Выражение для плотности распределения Далица распада \dkpp, если $D$-мезон рожден в процессе \bdk, с учетом осцилляций $D$-мезонов:
+\begin{equation}\label{eq:pBMixCP}
+  \begin{split}
+   \mcp^{\prime}_{B^{\pm}}\lbr\mpmsq,\mmpsq\rbr&=
+     a_0\left [\mcp+r_B^2\mcpbar+2\sqrt{\mcp\mcpbar}\lbr x_BC+y_BS\rbr\right ]\\
+   &+a_1\left [\rcp^{\pm 2}\mcpbar+r\rcp^{\mp 2}r_B^2\mcp + 
+     2\sqrt{\mcp\mcpbar}\lbr x_{B^{\pm}}^{\pm}C^{\pm}-
+                             y_{B^{\pm}}^{\pm}S^{\pm}\rbr\right ]\\
+   &+a_2\left [x_{B^{\pm}}^{\pm}\lbr \rcp^{\pm 1}\mcpbar+\rcp^{\mp 1}\mcp\rbr+
+     \sqrt{\mcp\mcpbar}\lbr \rcp^{\pm 1}+
+                            \rcp^{\mp 1}r_B^2\rbr C^{\pm}\right ]\\
+   &+a_3\left [y_{B^{\pm}}^{\pm}\lbr \rcp^{\pm 1}\mcpbar-\rcp^{\mp 1}\mcp\rbr+
+     \sqrt{\mcp\mcpbar}\lbr \rcp^{\pm 1}-
+                            \rcp^{\mp 1}r_B^2\rbr S^{\pm}\right ],
+  \end{split}
+ \end{equation}
+где $x_B^{\pm}=r_B\cos{\lbr \delta_B\pm\gphi\pm\alcp\rbr}$, 
+    $y_B^{\pm}=r_B\sin{\lbr \delta_B\pm\gphi\pm\alcp\rbr}$.
 
-Можно использовать первый для вставки небольших фрагментов
-внутри текста, а второй для вставки полного
-кода в приложении, если таковое имеется.
+\chapter{Процедура проведения численных экспериментов методом Монте-Карло} \label{app:toy-mc}
+В главе~\ref{chapt2} описаны результаты численных экспериментов, полученные с помощью описанной в этом приложении процедуры. 
 
-Если нужно вставить совсем короткий пример кода (одна или две строки), то выделение  линейками и нумерация может смотреться чересчур громоздко. В таких случаях можно использовать окружения \texttt{lstlisting} или \texttt{Verb} без \texttt{ListingEnv}. Приведём такой пример с указанием языка программирования, отличного от заданного по умолчанию:
-\begin{lstlisting}[language=Haskell]
-fibs = 0 : 1 : zipWith (+) fibs (tail fibs)
-\end{lstlisting}
-Такое решение~--- со вставкой нумерованных листингов покрупнее
-и вставок без выделения для маленьких фрагментов~--- выбрано,
-например, в книге Эндрю Таненбаума и Тодда Остина по архитектуре
-%компьютера~\autocite{TanAus2013} (см.~рис.~\ref{fig:tan-aus}).
+При времяинтегрированных измерениях, наблюдаемой величиной является количество событий $N_i$, попавших в область фазового пространства с индексом $i$ (будем считать, что индекс $i$ учитывает все дискретные параметры, в том числе, например, аромат).  Для нахождения значений физических параметров используется метод максимального правдоподобия с функцией правдоподобия~\mcl:
+\begin{equation}
+ -2\ln\mcl = -2\sum\limits_i{\ln P\lbr N_i, \left< N_i\right> \rbr},
+\end{equation}
+где $P\lbr N_i, \left< N_i\right> \rbr$ обозначает функцию распределения Пуассона для $N_i$ наблюдаемых событий при ожидаемой величине $\left< N_i\right>$.  Если целью численного эксперимента является оценка статистической неопределенности, то значения $N_i$ являются случайными величинами, подчиняющимися распределению Пуассона для ожидаемых значений $\left< N_i\right>$.  Среднеквадратичное отклонение найденных значений физических величин при многократном повторении численного эксперимента используется для оценки статистической неопределенности.
 
-Наконец, для оформления идентификаторов внутри строк
-(функция \lstinline{main} и тому подобное) используется
-\texttt{lstinline} или, самое простое, моноширинный текст
-(\texttt{\textbackslash texttt}).
+В случае изучения систематических смещений во времяинтегрированных измерениях, величины $N_i$ вычисляются с помощью точных формул и фиксируются (что соответствует случаю бесконечной статистики).  Величины $\left< N_i\right>$, используемые при определении значений физических параметров, вычисляются с помощью упрощенных моделей (например, не учитывающих осцилляции $D$-мезонов).  Полученные отличие восстановленных значений физических параметров от используемых при вычислении величин $N_i$, используются в качестве оценки систематического смещения.
+
+При времязависимых измерениях, мы имеем дело с плотностями вероятности $p_i(t)$ и набором из $N$ событий, причем событие $j\in\left[ 1, N\right]$ представляет собой пару $\lbr t_j, i_j \rbr$.  Функция правдоподобия в этом случае имеет вид
+\begin{equation}
+ \mcl = \prod\limits_{j=1}^{N}p_{i_j}\lbr t_j\rbr.
+\end{equation}
+Пары $\lbr t_j, i_j \rbr$ всегда генерируются с использованием точных формул.  Для оценки статистической неопределенности, значения физических параметров определяются с использованием точных выражения для плотностей вероятности $p_i(t)$.  В случае оценки систематического смещения, плотности вероятности, используемые при определении значений физических параметров, записываются с помощью упрощенной модели, аналогично случаю времяинтегрированных измерений.  Заметим, что в случае времязависимых измерений нет возможности полностью исключить статистическую неопределенность при изучении систематического смещения.
+
+\chapter{Кинематическая реконструкция вершин распадов} \label{app:kine-rec}
+Алгоритм кинематической реконструкции распадов, упомянутый в пункте~\ref{sec:kinerec}, реализован с помощью метода наименьших квадратов.  Кинематические ограничения (например, требование на инвариантную массу частиц или требование привязки к области места встречи пучков) учитываются с помощью множителей Лагранжа.
+
+Предполагая, что кинематические ограничения заданы в виде $r$ уравнений в форме $\Hbf\lbr\albf,\vbf\rbr=0$, функцию $\chi^2$, которую минимизирует искомая вершина распада, в общем виде можно записать в следующем виде~\cite{Avery}:
+\begin{equation}
+ \chi^2 = \lbr \albf - \albf_0 \rbr^T\Vbf_{\albf_0}^{-1}\lbr \albf - \albf_0 \rbr 
+        + \lbr  \vbf -  \vbf_0 \rbr^T\Vbf_{ \vbf_0}^{-1}\lbr  \vbf -  \vbf_0 \rbr 
+        + \lambda^T\Hbf \lbr \albf, \vbf \rbr,
+\end{equation}
+где $\albf = \lbr \albf_1, \albf_2, \dots, \albf_n \rbr$ обозначает вектор параметров $n$ треков и $\vbf = \lbr v_1,v_2,v_3 \rbr$ обозначает координату искомой точки пересечения всех треков,  $\albf_0$ и $\vbf_0$ соответствуют начальным значениям, $\Vbf_{\albf_0}$ и $\Vbf_{\vbf_0}$ --- матрицы ковариаций.
+
+Уравнения $\Hbf\lbr\albf,\vbf\rbr=0$, вообще говоря, нелинейны.  Чтобы решения задачи в общем случае, эти уравнения линеаризуют, раскладывая в ряд вблизи текущих значений $\albf_A$ и $\vbf_A$:
+\begin{equation}
+\begin{split}
+ 0 & = \Hbf\lbr\albf_A,\vbf_A\rbr 
+   + \left.\frac{\partial\Hbf\lbr\albf,\vbf\rbr}{\partial\albf}\right|_{\albf_A,\vbf_A}\lbr \albf - \albf_A \rbr
+   + \left.\frac{\partial\Hbf\lbr\albf,\vbf\rbr}{\partial \vbf}\right|_{\albf_A,\vbf_A}\lbr  \vbf -  \vbf_A \rbr\\
+   & = \mathbf{d} + \mathbf{D}\delta\albf + \mathbf{E}\delta\vbf.
+\end{split}
+\end{equation}
+
+При таком разложении функция $\chi^2$ принимает вид
+\begin{equation}\label{eq:chisq-kine-fit}
+ \chi^2 = \lbr \albf - \albf_0 \rbr^T\Vbf_{\albf_0}^{-1}\lbr \albf - \albf_0 \rbr 
+        + \lbr  \vbf -  \vbf_0 \rbr^T\Vbf_{ \vbf_0}^{-1}\lbr  \vbf -  \vbf_0 \rbr 
+        + \lambda^T\lbr \mathbf{d} + \mathbf{D}\delta\albf + \mathbf{E}\delta\vbf\rbr.
+\end{equation}
+Минимум выражения~\eqref{eq:chisq-kine-fit} находится методом последовательных приближений.  Детальное описание процедуры кинематической реконструкции и рассмотрение различных кинематических ограничений приведено в работе~\cite{Avery}.
+
+%\subsection{Параметризация \de-\mbc распределений}\label{sec:param}
+\chapter{Параметризация \de-\mbc распределений}\label{sec:param}
+\paragraph{Сигнальные распределения.}
+
+\de-\mbc распределения для верно реконструированных событий процессов \bdstarpi, \bdstaretagg и \bdetap описываются функцией вида
+\begin{equation}\label{eq:de_mbc_sig_gg}
+ p\subsig^{\gamma\gamma}(\de,\mbc) = p_{\mathrm{sig}1}^{\gamma\gamma}(\de)p_{\mathrm{sig}2}^{\gamma\gamma}(\mbc,\de),
+\end{equation}
+Функция $p_{\mathrm{sig}1}^{\gamma\gamma}(\de)$ имеет вид
+\begin{equation}\label{eq:de_sig_pdf_gg}
+\begin{split}
+ p_{\mathrm{sig}1}^{\gamma\gamma}(\de) = (1-f_l-f_r)G(\de^0,\sigma)+&f_l\cbfcn(\de^0_l,\sigma_l,n_l,\alpha_l)+\\
+ &f_r\cbfcn(\de^0_r,\sigma_r,n_r,\alpha_r),
+\end{split}
+\end{equation}
+где $G$ обозначает функцию Гаусса, а \cbfcn обозначает модифицированную функцию Гаусса,  которая впервые была  использована в эксперименте \textrm{Crystall Ball}~\cite{crystallball}:
+\begin{equation}\label{eq:CB}
+ \cbfcn\left(x;x_0,\alpha,n,\sigma\right) = h_{\textrm{CB}}\left\{
+ \begin{array}{ll}
+  e^{-\frac{\left(x-x_0\right)^2}{2\sigma^2}},&  x-x_0>-\sigma\alpha \\
+  \frac{\left(\frac{n}{|\alpha|}\right)^{-n}e^{-\frac{|\alpha|^2}{2}}}{\left(\frac{n}{|\alpha|}-|\alpha|-\frac{x-x_0}{\sigma}\right)^{-n}},& x-x_0\leq-\sigma\alpha
+ \end{array}
+ \right.,
+\end{equation}
+где нормировочная константа
+\begin{equation}\label{eq:CB_norm}
+ h_{\textrm{CB}} = \frac{1}{\sigma\left[\frac{n}{|\alpha|}\frac{1}{n-1}e^{-\frac{|\alpha|^2}{2}}+\sqrt{\frac{\pi}{2}}\left(1+\textrm{erf}\left(\frac{|\alpha|}{\sqrt{2}}\right)\right)\right]}
+\end{equation}
+и $\textrm{erf}(x)$ --- интеграл вероятности нормального распределения (функция ошибок).  Функция $p_{\mathrm{sig}2}^{\gamma\gamma}(\mbc,\de)$ имеет вид
+\begin{equation}\label{eq:mbc_sig_pdf_gg}
+ p_{\mathrm{sig}2}^{\gamma\gamma}(\mbc,\de) = \nskfcn\left(\mbc;\mbc^0\debk,\sigma\debk,\alpha\right),
+\end{equation}
+где \nskfcn обозначает модифицированную функцию Гаусса, впервые опубликованную в работе~\cite{NskPDF}:
+\begin{equation}\label{eq:NskPDF}
+ \nskfcn(x;x_0,\sigma,\alpha) = h_{\textrm{Nsk}}e^{-\frac{1}{2\sigma_0^2}\ln^2\left(1-\frac{\alpha\left(x-x_0\right)}{\sigma}\right)-\frac{\sigma_0^2}{2}},
+\end{equation}
+где $h_{\textrm{Nsk}}$ --- нормировочная константа,
+\begin{equation}\label{eq:NskParams}
+ \sigma_0 = \frac{2}{\eta} \sinh^{-1}\left(\frac{\alpha\eta}{2}\right),\quad
+ \eta = 2\sqrt{\ln{4}}\approx 2.36.
+\end{equation}
+Параметры $\mbc^0\debk$ и $\sigma\debk$, введенные в уравнении \eqref{eq:mbc_sig_pdf_gg}, являются полиномиальными функциями параметра \de:
+\begin{equation}\label{eq:de_mbc_sig_gg_corr}
+\begin{split}
+ \mbc^0\debk &= c^{(0)}_{\mbc^0} + c^{(1)}_{\mbc^0}\de + c^{(2)}_{\mbc^0}\de^2,\\
+ \sigma\debk &= c^{(0)}_{\sigma} + c^{(1)}_{\sigma^0}\de + c^{(2)}_{\sigma^0}\de^2.
+\end{split}
+\end{equation}
+Такая параметризация позволяет учесть корреляцию \de- и \mbc-распределений.  
+
+Значения параметров $c^{(i)}_{\{\mbc^0,\sigma\}}$ определяются из событий сигнального моделирования с помощью следующей процедуры: для \mbc распределений в узких диапазонах параметра \de определялись оптимальные значения параметров $\mbc^0$ и $\sigma$; полученные зависимости аппроксимировались полиномами второго порядка (рисунок~\ref{fig:sig_corr1}).
+
+\begin{figure}[H]
+ \centering
+  \includegraphics[width=0.8\textwidth]{sig_corr1}\\
+  \caption{Значения параметров $\mbc^0$ (слева) и $\sigma$ (справа) (уравнение \eqref{eq:mbc_sig_pdf_gg}) для различных значений параметра~\de, полученные из \mbc-распределений сигнального моделирования распадов \bdpi.}
+  \label{fig:sig_corr1}
+\end{figure}
+
+\de-\mbc распределения для верно реконструированных событий процессов \bdetappp и \bdomega описываются функцией
+\begin{equation}\label{eq:de_mbc_ppp_pdf}
+ p\subsig^{\pi\pi\pi^0}\left(\de,\mbc\right) = (1-f\subtail^{\textrm{sig}})p\subpeak^{\pi\pi\pi^0}\left(\de,\mbc\right) + f\subtail^{\textrm{sig}} p\subtail^{\pi\pi\pi^0}\left(\de,\mbc\right).
+\end{equation}
+Функция $p^{\pi\pi\pi^0}\subpeak$ имеет тот же вид, что приведен в уравнении \eqref{eq:de_mbc_sig_gg}, однако зависимость параметра $\mbc^{0,{\peak}}$ от \de описывается иначе:
+\begin{equation}
+ \mbc^{0,\peak}(\de) = \mu_0 + \mu_1\erf\left(\frac{\de-\varepsilon_0}{\xi}\right),
+\end{equation}
+где \erf\ --- функция ошибок, значения параметров $\mu_0$, $\mu_1$, $\varepsilon_0$ и $\xi$ определяются с помощью событий сигнального моделирования с использованием процедуры, аналогичной описанной выше (рисунок~\ref{fig:sig_corr2}). 
+
+\begin{figure}[htb]
+ \centering
+  \includegraphics[width=0.8\textwidth]{peak_corr}\\
+  \caption{Значения параметров $\mbc^0$ (слева) и $\sigma$ (справа) функции $p\subpeak^{\pi\pi\pi^0}$  (уравнение \eqref{eq:de_mbc_ppp_pdf}) для различных значений параметра~\de, полученные из \mbc-распределений сигнального моделирования распадов \bdomega.}
+  \label{fig:sig_corr2}
+\end{figure}
+
+Функция $p\subtail^{\pi\pi\pi^0}$ описывает события, в которых один из фотонов конечного состояния не связан с распадом \brec (комбинаторный фотон).  Наличие одного комбинаторного фотона не влияет на определение вершин распадов, а значит не влияет на измеряемые параметры \cpconj-нарушения.  Функция $p\subtail^{\pi\pi\pi^0}$ имеет следующий вид:
+\begin{equation}\label{eq:de_mbc_sig_ppp_tail}
+ p\subtail^{\pi\pi\pi^0}(\de,\mbc) = p_{\mathrm{tail}1}^{\pi\pi\pi^0}(\de)p_{\mathrm{tail}2}^{\pi\pi\pi^0}(\mbc,\de),
+\end{equation}
+где
+\begin{equation}\label{eq:de_sig_pdf_ppp_tail}
+ p_{\mathrm{tail}1}^{\pi\pi\pi^0}(\de) = (1-f^{\tail}_l)G(\de^{0,\tail},\sigma^{\tail})+f^{\tail}_lG_{\textrm{CB}}(\de^{0,\tail}_l,\sigma^{\tail}_l,n^{\tail}_l,\alpha^{\tail}_l),
+\end{equation}
+и $n^{\tail}_{l} = 2$.  Функция $p_{\mathrm{tail}2}^{\pi\pi\pi^0}(\mbc,\de)$ имеет тот же вид, что функция, определенная в уравнении~\eqref{eq:mbc_sig_pdf_gg}.  Корреляция между распределениями \de и \mbc описывается аналогично форме, определенной в уравнении~\eqref{eq:de_mbc_sig_gg_corr}.
+
+\paragraph{\boldmath Комбинаторный фон от \qqbar-событий.}
+ \de-\mbc распределения фоновых событий из \qqbar-событий описывается функцией
+\begin{equation}\label{eq:de-mbc-cont}
+ p_{\textrm{cnt}}(\de,\mbc) = \cheb(\de)\times\argus(\mbc),
+\end{equation}
+где \cheb обозначает полином Чебышева первого рода второго порядка и \argus обозначает функцию, опубликованную группой ARGUS в работе~\cite{arguspdf}
+\begin{equation}
+ \argus(\mbc;\alpha,E_{\textrm{beam}}^*) = \mbc\sqrt{1-\left(\frac{\mbc}{E_{\textrm{beam}}^*}\right)^2}e^{-\alpha\left(1-\left(\frac{\mbc}{E_{\textrm{beam}}^*}\right)^2\right)}.
+\end{equation}
+
+\paragraph{\boldmath Комбинаторный фон от \bbbar-событий.}
+
+\de-\mbc распределения комбинаторного фона из \bbbar-событий, для всех сигнальных процессов, кроме \bdstpi, описываются функцией
+\begin{equation}\label{eq:de-mbc-BB}
+ p\subcmb(\de,\mbc) = p_{\expr}(\de)\times\argus(\mbc),
+\end{equation}
+где $p_{\expr}$ обозначает плотность экспоненциального распределения
+\begin{equation}\label{eq:exp}
+  p_{\expr}(\de) = \frac{1}{\lambda}e^{\frac{\de_0-\de}{\lambda}}.
+\end{equation}
+
+\begin{figure}[htb]
+% \begin{minipage}[b]{0.32\textwidth}
+%   \centering
+%   \includegraphics[width=\textwidth]{d0rho_bkg_de}
+%   \subcaption{}
+%  \end{minipage}
+%  \begin{minipage}[b]{0.32\textwidth}
+%   \centering
+%   \includegraphics[width=\textwidth]{d0rho_bkg_mbc}
+%   \subcaption{}
+%  \end{minipage}
+%  \begin{minipage}[b]{0.32\textwidth}
+%   \centering
+%   \includegraphics[width=\textwidth]{d0rho_bkg_2d_v3}
+%   \subcaption{}
+%  \end{minipage}
+\centering
+\begin{minipage}[b]{0.45\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{d0rho_bkg_de}
+  \subcaption{}
+ \end{minipage}
+ \begin{minipage}[b]{0.45\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{d0rho_bkg_mbc}
+  \subcaption{}
+ \end{minipage}
+ \\
+ \begin{minipage}[b]{0.45\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{d0rho_bkg_2d_v3}
+  \subcaption{}
+ \end{minipage}
+  \caption{События общего моделирования: а) распределение \de в сигнальной области параметра \mbc, б) распределение \mbc в сигнальной области \de и в) двумерное \de-\mbc распределение для событий \bpdrho, реконструированных как \bdstpi.  Форма распределения описана с помощью инструмента \textrm{RooNDKeys}~\cite{roofit}.}
+\label{fig:d0rho}
+\end{figure}
+
+Значительная доля фона для процесса \bdstpi обусловлена процессом \bpdrho.  Вместо заряженного $\pi$-мезона из распада $\rho^+$-мезона может быть выбран случайный нейтральный $\pi$-мезон, необходимый для формирования \dstn-кандидата.  Распределения \de и \mbc для таких событий приведены на рисунке~\ref{fig:d0rho}.  Форма этого распределения отличается от формы распределений других компонент фона.  Кроме того, распределения \de и \mbc для этих событий имеют значительную корреляцию.  Эта компонента ($p_{D\rho}(\de,\mbc)$) описывается отдельно, непараметрически, с помощью инструмента \textrm{RooNDKeys}~\cite{roofit}. Таким образом, \de-\mbc распределение комбинаторного фона из \bbbar-событий для процесса \bdstpi описывается функцией
+\begin{equation}
+ p_{\textrm{cmb}}^{\bdstpi}(\de,\mbc) = (1-f_{D\rho})p_{\textrm{cmb}}(\de,\mbc)+ f_{D\rho}p_{D\rho}(\de,\mbc),
+\end{equation}
+где $f_{D\rho}$ --- доля комбинаторного фона из \bbbar-событий, обусловленная процессом \bpdrho.
+
+\paragraph{\boldmath Фон от не полностью реконструированных распадов $B$-мезонов.}
+
+Процесс \bmdrho, при потере заряженного $\pi$-мезона из распада $\rho^-$, может быть реконструирован как \bdpi.  Аналогично, процесс \bmdstrho может быть реконструирован как \bdstpi.  В обоих случаях энергия реконструированного $B$-кандидата будет меньше верного значения.  Фон от таких событий приводит к структуре в распределении \de в диапазоне $[-0.3\gev,-0.1\gev]$ с резким спадом в диапазоне $[-0.15\gev,-0.10\gev]$.  События \bmdstph, реконструированные как \bdh, приводят к схожему \de-\mbc распределению, однако их доля невелика.  С учетом данных особенностей, распределение \de для \bpdstarrho событий можно параметризовать функцией
+\begin{equation}\label{eq:kuzmin-fcn}
+   p\subpeak(\de) \propto 1+\zeta_{\mathrm{l}}\left(\de-\de_0\right)+s\ln\left(1+b e^{{\frac{\left(\zeta_{\textrm{r}}-\zeta_{\mathrm{l}}\right)\left(\de-\de_0\right)}{s}}}\right),
+\end{equation}
+которая определена в интервале $[-0.15\gev, 0.30\gev]$ и описывает две прямые линии, гладко соединенные вблизи точки $\de_0$.
+
+В распределении \mbc такие события дают широкий пик около массы $B$-мезона.  Для процессов \bdstarpi, \bdstaretagg и \bdetap фоновое распределение \mbc от процессов \bpdstarrho описывается функцией
+\begin{equation}\label{eq:mbc_peak_pdf_gg}
+ p\subpeak^{\gamma\gamma}(\de,\mbc) = \nskfcn\left(\mbc^0(\de),\sigma(\de),\alpha\right),
+\end{equation}
+где параметры $\mbc^0$ и $\sigma$ являются линейными функциями \de.  В случае процессов \bdetappp и \bdomega, соответствующие \mbc распределения не имеют значительной корреляции с \de распределениями и параметризованы функцией
+\begin{equation}\label{eq:mbc_peak_pdf_ppp}
+ p\subpeak^{\pi\pi\pi^0}(\mbc) = (1-f_G)\argus(\mbc)+f_G G(\mbc).
+\end{equation}
+
+%Процессы \bmdstarrho и \bmdstph, реконструированные как кандидаты \bdsth, составляют значительную долю фона.  При этом, заряженный $\pi$-мезон из распада 
 
 
-Пример~\ref{list:internal3}, иллюстрирующий подключение переопределённого языка. Может быть полезным, если подсветка кода работает криво. Без дополнительного окружения, с подписью и ссылкой, реализованной встроенным средством.
-\begin{lstlisting}[language={Renhanced},caption={Пример листинга c подписью собственными средствами},label={list:internal3}]
-## Caching the Inverse of a Matrix
-
-## Matrix inversion is usually a costly computation and there may be some
-## benefit to caching the inverse of a matrix rather than compute it repeatedly
-## This is a pair of functions that cache the inverse of a matrix.
-
-## makeCacheMatrix creates a special "matrix" object that can cache its inverse
-
-makeCacheMatrix <- function(x = matrix()) {#кириллица в комментариях при xelatex и lualatex имеет проблемы с пробелами
-    i <- NULL
-    set <- function(y) {
-        x <<- y
-        i <<- NULL
-    }
-    get <- function() x
-    setSolved <- function(solve) i <<- solve
-    getSolved <- function() i
-    list(set = set, get = get,
-    setSolved = setSolved,
-    getSolved = getSolved)
-    
-}
 
 
-## cacheSolve computes the inverse of the special "matrix" returned by
-## makeCacheMatrix above. If the inverse has already been calculated (and the
-## matrix has not changed), then the cachesolve should retrieve the inverse from
-## the cache.
+\chapter{Параметризация временного разрешения в эксперименте Belle} \label{app:time-resolution}
+Введенная в уравнении~\eqref{eq:psig_dt_cpv} (пункт~\ref{sec:time-resolution}) функция $\mcr\lbr\dt\rbr$, описывающая временное разрешение для верно реконструированных событий, имеет вид
+\begin{equation}
+ \begin{split}
+ \mcr\lbr\dt\rbr & = \iiint\limits_{-\infty}^{\phantom{--}+\infty}
+     \mcr_{\det}^{\rec}\lbr\dt    -\dt\prm\rbr
+     \mcr_{\det}^{\asc}\lbr\dt\prm-\dt\pprm\rbr \\
+     & \times \mcr_{\np}\lbr\dt\pprm-\dt\ppprm\rbr
+              \mcr_{\kin}\lbr\dt\ppprm\rbr
+     \dd\dt\prm \dd\dt\pprm \dd\dt\ppprm.
+ \end{split}
+\end{equation}
+Функции $\mcr_{\det}^{\rec}$ и $\mcr_{\det}^{\asc}$ описывают детекторное разрешение при измерении вершин сигнального и помечающего $B$-мезонов, соответственно.  Функция $\mcr_{\np}$ описывает смещение при определении вершины помечающего $B$-мезона, возникающее из-за использования заряженных частиц из распадов долгоживущих частиц, таких как \ks- или $D$-мезоны.  Функция $\mcr_{\kin}$ описывает искажение распределения \dt, возникающее в результате использования приближения о том, что $B$-мезоны покоятся в \cms.
 
-cacheSolve <- function(x, ...) {
-    ## Return a matrix that is the inverse of 'x'
-    i <- x$getSolved()
-    if(!is.null(i)) {
-        message("getting cached data")
-        return(i)
-    }
-    data <- x$get()
-    i <- solve(data, ...)
-    x$setSolved(i)
-    i  
-}
-\end{lstlisting} %$ %Комментарий для корректной подсветки синтаксиса
-                 %вне листинга
+\paragraph{Детекторное разрешение. } Детекторное разрешение для вершин, реконструированных с использованием \emph{двух и более треков}, параметризовано следующим образом:
+\begin{equation}\label{eq:rdet-mult}
+ \mcr_{\det}^{\rmq,\mathrm{mult}}\lbr \delta z_{\rmq} \rbr = 
+  G\lbr \delta z_{\rmq}; \lbr s_{\rmq}^0 + s_{\rmq}^1h \rbr \sigma_{z_{\rmq}} \rbr
+ ,\quad \rmq \in \{\rec,\asc\}.
+\end{equation}
+Здесь $\delta z_{\rmq} = z_{\rmq}^{\fit} - z_{\rmq}^{\gen}$ обозначает ошибку при реконструкции вершины распада $B$-мезона; $G$ обозначает функцию Гаусса; $\sigma_{z_{\rmq}}$ обозначает оценку неопределенности определения вершины распада, которую возвращает алгоритм кинематической реконструкции; $h$ обозначает величину $\chi^2$, возвращаемую алгоритм кинематической реконструкции, из которой изъято слагаемое, отвечающее за привязку к области взаимодействия пучков; $s_{\rmq}^0$ и $s_{\rmq}^1$ --- коэффициенты.  Заметим, что параметры $\sigma_{z_{\rmq}}$ и $h$ определяются независимо для каждого события на основе результата алгоритма алгоритма кинематической реконструкции.  Если вместо величины $h$ использовать полное значение $\chi^2$, то возникает нежелательная корреляция между $\chi^2$ и измеренным значением \dt.  
+При определении функций $\mcr_{\det}^{\rmq,\mathrm{mult}}$ согласно выражению~\eqref{eq:rdet-mult}, коэффициенты $s_{\rmq}^0$ и $s_{\rmq}^1$ не зависят от конечного состояния и могут быть определены с помощью экспериментальных данных.
 
-Листинг~\ref{list:external1} подгружается из внешнего файла. Приходится загружать без окружения дополнительного. Иначе по страницам не переносится.
-    \lstinputlisting[lastline=78,language={R},caption={Листинг из внешнего файла},label={list:external1}]{listings/run_analysis.R}
+Характерное пространственное разрешение при определении координаты многотрековой вершины сигнального $B$-мезона составляет приблизительно $70\mum$.  Для помечающего $B$-мезона (без учета влияния треков из вторичных вершин) эта величина составляет приблизительно $100\mum$.
 
+Если вершина распада восстанавливается с использованием единственного трека (посредством проецирования траектории на область взаимодействия пучков), то величина $h$ не имеет смысла, а детекторное разрешение параметризуется следующим образом:
+\begin{equation}
+ \mcr^{\rmq,\mathrm{sing}}_{\det}\lbr \delta z_{\rmq} \rbr = 
+   \lbr 1 - f_{\rmq}^{\tail} \rbr G\lbr \delta z_{\rmq}; s_{\rmq}^{\main}\sigma_{z_{\rmq}} \rbr
+   + f_{\rmq}^{\tail} G\lbr \delta z_{\rmq}; s_{\rmq}^{\tail}\sigma_{z_{\rmq}} \rbr.
+\end{equation}
 
+\paragraph{Влияние вторичных вершин. } Вид функции $\mcr_{\np}$ определялся с помощью событий специального моделирования.  При генерировании этих событий время жизни долгоживущих частиц в продуктах распада $B$-мезонов было установлено равным нулю.  Изучение полученного разрешения и сравнение его с разрешением при обычной процедуре моделирования позволило определить вид функции $\mcr_{\np}$:
+\begin{equation}
+ \begin{split}
+  \mcr_{\np}\lbr z_{\asc} \rbr & = f_{\delta}\delta^{\mathrm{Dirac}} \lbr z_{\asc} \rbr 
+  + \lbr 1 - f_{\delta} \rbr \left[ f_{\rmp} E_{\rmp}\lbr z_{\asc};\cbgups\tau_{\np}^{\rmp} \rbr\right. \\
+  &                      + \left.\lbr 1-f_{\rmp} \rbr E_{\rmn}\lbr z_{\asc};\cbgups\tau_{\np}^{\rmn} \rbr \right],
+ \end{split}
+\end{equation}
+где $\delta^{\mathrm{Dirac}}$ обозначает функцию Дирака, $f_{\delta}$ и $f_{\rmp}$ --- постоянные коэффициенты и
+\begin{equation}
+ E_{\rmp}\lbr x;\tau\rbr = 
+ \begin{cases}
+  \frac{1}{\tau}e^{-\frac{x}{\tau}}, & x>0     \\
+  0,                                 & x\leq 0
+ \end{cases}
+ ,\quad
+ E_{\rmn}\lbr x;\tau\rbr = 
+ \begin{cases}
+  0,                                 & x>0    \\
+  \frac{1}{\tau}e^{\frac{x}{\tau}},  & x\leq 0
+ \end{cases}
+ .
+\end{equation}
+Значения коэффициентов $f_{\delta}$ и $f_{\rmp}$ различаются для случаев, когда при определения аромата $B$-мезона используется высокоэнергичный лептон и когда такого лептона нет.
 
+Если вершина помечающего $B$-мезона восстанавливается с использованием нескольких треков, что эффективные времена жизни $\tau_{\np}^{\rmp}$ и $\tau_{\np}^{\rmn}$ задаются с использованием результатов кинематической реконструкции:
+\begin{equation}
+ \begin{split}
+  & \tau_{\np,\mathrm{mult}}^{\rmp} = s_{\np}^{\mathrm{global}}\left[
+     \tau_{\rmp}^{0}
+   + \tau_{\rmp}^{1} \frac{\sigma_{z_{\asc}}}{\cbgups} 
+   + \tau_{\rmp}^{2} h_{\asc}
+   + \tau_{\rmp}^{3} \frac{\sigma_{z_{\asc}}}{\cbgups} h_{\asc}
+   \right],\\
+  & \tau_{\np,\mathrm{mult}}^{\rmn} = s_{\np}^{\mathrm{global}}\left[
+     \tau_{\rmn}^{0}
+   + \tau_{\rmn}^{1} \frac{\sigma_{z_{\asc}}}{\cbgups} 
+   + \tau_{\rmn}^{2} h_{\asc}
+   + \tau_{\rmn}^{3} \frac{\sigma_{z_{\asc}}}{\cbgups} h_{\asc}
+   \right].
+ \end{split}
+\end{equation}
+В случае однотрековых вершин используется упрощенная модель с постоянными эффективными временами $\tau_{\np}^{\rmp,\mathrm{sing}}$ и $\tau_{\np}^{\rmn,\mathrm{sing}}$.  
 
+Все параметры, описывающие влияние треков из вторичных вершин распада помечающего $B$-мезона, определяются с помощью событий моделирования.  Влияние треков из вторичных вершин приводит к увеличению характерного разрешения для многотрековых вершин помечающего $B$-мезона приблизительно до $130\mum$.  Характерное разрешение для однотрековых вершин составляет приблизительно $270\mum$.
 
+\paragraph{Учет кинематического приближения. } Предположение о том, что $B$-мезоны в \cms покоятся, позволяет использовать приближение~\eqref{eq:kine-appr}, однако приводит к необходимости учитывать это приближение в функции разрешения.  Отличие \dt, полученного с помощью этого приближения от верного значения разности собственных времен распадов $B$-мезонов задается выражением
+\begin{equation}
+\begin{split}
+ x & = \dt - \dt_{\mathrm{true}} = \frac{z_{\rec} - z_{\asc}}{\cbgups} - \lbr t_{\rec} - t_{\asc} \rbr \\
+   & = \frac{\bg_{\brec}}{\bg_{\ups}}t_{\rec} + \frac{\bg_{\basc}}{\bg_{\ups}}t_{\asc} 
+     = \lbr \ak + \ck - 1 \rbr t_{\rec} - \lbr \ak - \ck - 1 \rbr t_{\asc},
+\end{split}
+\end{equation}
+где 
+\begin{equation}
+ \ak = \frac{E_{\brec}^{\cms}}{m_B},\quad 
+ \ck = \frac{p_{\brec}^{\cms}\cos{\theta_{\brec}^{\cms}}}{\lbr\beta\rbr_{\ups}m_B}
+\end{equation}
+и $E_{\brec}^{\cms}\approx 5.292\gev$, $p_{\brec}^{\cms}\approx 0.340\gevc$ и $\theta_{\brec}^{\cms}$ обозначают энергию, импульс и угол относительно оси пучков реконструированного $B$-мезона в \cms. 
 
-\chapter{Очень длинное название второго приложения, в котором продемонстрирована работа с длинными таблицами} \label{AppendixB}
+Дальнейшее рассмотрение позволяет получить выражение для функции~$\mcr_{\kin}$~\cite{markusphd}:
+\begin{equation}
+ \mcr_{\kin}\lbr x\rbr = 
+ \begin{cases}
+  E_{\rmp}\lbr x - (\ak-1)\dt_{\mathrm{true}} + \ck|\dt_{\mathrm{true}}|; \btau|\ck| \rbr,
+  & \cos\theta_{\brec}^{\cms}>0, \\
+  \delta^{\mathrm{Dirac}}\lbr x - (\ak-1)\dt_{\mathrm{true}} \rbr,                        
+  & \cos\theta_{\brec}^{\cms}=0, \\
+  E_{\rmn}\lbr x - (\ak-1)\dt_{\mathrm{true}} + \ck|\dt_{\mathrm{true}}|; \btau|\ck| \rbr,
+  & \cos\theta_{\brec}^{\cms}<0.
+ \end{cases}
+\end{equation}
+Свертка точной плотности вероятности $\mcp\lbr\dt_{\mathrm{true}}\rbr$ с функцией $\mcr_{\kin}\lbr x = \dt - \dt_{\mathrm{true}}\rbr$ позволяет получить ожидаемую плотность вероятности для параметра \dt.
 
- \section{Подраздел приложения}\label{AppendixB1}
-Вот размещается длинная таблица:
-\fontsize{10pt}{10pt}\selectfont
-\begin{longtable}[c]{|l|c|l|l|}
-% \caption{Описание входных файлов модели}\label{Namelists} 
-%\\ 
- \hline
- %\multicolumn{4}{|c|}{\textbf{Файл puma\_namelist}}        \\ \hline
- Параметр & Умолч. & Тип & Описание               \\ \hline
-                                              \endfirsthead   \hline
- \multicolumn{4}{|c|}{\small\slshape (продолжение)}        \\ \hline
- Параметр & Умолч. & Тип & Описание               \\ \hline
-                                              \endhead        \hline
-% \multicolumn{4}{|c|}{\small\slshape (окончание)}        \\ \hline
-% Параметр & Умолч. & Тип & Описание               \\ \hline
-%                                             \endlasthead        \hline
- \multicolumn{4}{|r|}{\small\slshape продолжение следует}  \\ \hline
-                                              \endfoot        \hline
-                                              \endlastfoot
- \multicolumn{4}{|l|}{\&INP}        \\ \hline 
- kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
- kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
- \hline
-  %& & & $\:$ \\ 
- \multicolumn{4}{|l|}{\&SURFPAR}        \\ \hline
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\ 
- \hline 
-\end{longtable}
+Функция $\mcr_{\kin}$ не содержит свободных параметров, однако использование кинематического приближения~\eqref{eq:kine-appr} приводит к увеличению пространственного разрешения приблизительно на $35\mum$.
 
-\normalsize% возвращаем шрифт к нормальному
-\section{Ещё один подраздел приложения} \label{AppendixB2}
-
-Нужно больше подразделов приложения!
-
-Пример длинной таблицы с записью продолжения по ГОСТ 2.105
-
-    \centering
-	\small
-    \begin{longtable}[c]{|l|c|l|l|}
-	\caption{Наименование таблицы средней длины}%
-    \label{tbl:test5}% label всегда желательно идти после caption
-    \\
-    \hline
-     %\multicolumn{4}{|c|}{\textbf{Файл puma\_namelist}}        \\ \hline
-     Параметр & Умолч. & Тип & Описание\\ \hline
-     \endfirsthead%
-%     \multicolumn{4}{|c|}{\small\slshape (продолжение)}        \\ \hline
- \captionsetup{format=tablenocaption,labelformat=continued}% должен стоять до самого caption
-    \caption[]{}\\
-    \hline
-     Параметр & Умолч. & Тип & Описание\\ \hline
-      \endhead
-      \hline
-%     \multicolumn{4}{|r|}{\small\slshape продолжение следует}  \\
-%\hline
-     \endfoot
-         \hline
-     \endlastfoot
-     \multicolumn{4}{|l|}{\&INP}        \\ \hline 
-     kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-          &   &     & 1: генерация белого шума                  \\
-          &   &     & 2: генерация белого шума симметрично относительно \\
-      & & & экватора    \\
-     mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-     kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-          &   &     & 1: генерация белого шума                  \\
-          &   &     & 2: генерация белого шума симметрично относительно \\
-      & & & экватора    \\
-     mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-    kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-          &   &     & 1: генерация белого шума                  \\
-          &   &     & 2: генерация белого шума симметрично относительно \\
-      & & & экватора    \\
-     mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-    kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-          &   &     & 1: генерация белого шума                  \\
-          &   &     & 2: генерация белого шума симметрично относительно \\
-      & & & экватора    \\
-     mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-    kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-          &   &     & 1: генерация белого шума                  \\
-          &   &     & 2: генерация белого шума симметрично относительно \\
-      & & & экватора    \\
-     mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-    kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-          &   &     & 1: генерация белого шума                  \\
-          &   &     & 2: генерация белого шума симметрично относительно \\
-      & & & экватора    \\
-     mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-    kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-          &   &     & 1: генерация белого шума                  \\
-          &   &     & 2: генерация белого шума симметрично относительно \\
-      & & & экватора    \\
-     mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-    kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-          &   &     & 1: генерация белого шума                  \\
-          &   &     & 2: генерация белого шума симметрично относительно \\
-      & & & экватора    \\
-     mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-    kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-          &   &     & 1: генерация белого шума                  \\
-          &   &     & 2: генерация белого шума симметрично относительно \\
-      & & & экватора    \\
-     mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-    kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-          &   &     & 1: генерация белого шума                  \\
-          &   &     & 2: генерация белого шума симметрично относительно \\
-      & & & экватора    \\
-     mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-    kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-          &   &     & 1: генерация белого шума                  \\
-          &   &     & 2: генерация белого шума симметрично относительно \\
-      & & & экватора    \\
-     mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-    kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-          &   &     & 1: генерация белого шума                  \\
-          &   &     & 2: генерация белого шума симметрично относительно \\
-      & & & экватора    \\
-     mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-    kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-          &   &     & 1: генерация белого шума                  \\
-          &   &     & 2: генерация белого шума симметрично относительно \\
-      & & & экватора    \\
-     mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-    kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-          &   &     & 1: генерация белого шума                  \\
-          &   &     & 2: генерация белого шума симметрично относительно \\
-      & & & экватора    \\
-     mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-    kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-          &   &     & 1: генерация белого шума                  \\
-          &   &     & 2: генерация белого шума симметрично относительно \\
-      & & & экватора    \\
-     mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-     \hline
-      %& & & $\:$ \\ 
-     \multicolumn{4}{|l|}{\&SURFPAR}        \\ \hline
-    kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-          &   &     & 1: генерация белого шума                  \\
-          &   &     & 2: генерация белого шума симметрично относительно \\
-      & & & экватора    \\
-     mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-    kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-          &   &     & 1: генерация белого шума                  \\
-          &   &     & 2: генерация белого шума симметрично относительно \\
-      & & & экватора    \\
-     mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-    kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-          &   &     & 1: генерация белого шума                  \\
-          &   &     & 2: генерация белого шума симметрично относительно \\
-      & & & экватора    \\
-     mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-    kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-          &   &     & 1: генерация белого шума                  \\
-          &   &     & 2: генерация белого шума симметрично относительно \\
-      & & & экватора    \\
-     mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-    kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-          &   &     & 1: генерация белого шума                  \\
-          &   &     & 2: генерация белого шума симметрично относительно \\
-      & & & экватора    \\
-     mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-    kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-          &   &     & 1: генерация белого шума                  \\
-          &   &     & 2: генерация белого шума симметрично относительно \\
-      & & & экватора    \\
-     mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-    kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-          &   &     & 1: генерация белого шума                  \\
-          &   &     & 2: генерация белого шума симметрично относительно \\
-      & & & экватора    \\
-     mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-    kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-          &   &     & 1: генерация белого шума                  \\
-          &   &     & 2: генерация белого шума симметрично относительно \\
-      & & & экватора    \\
-     mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-    kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-          &   &     & 1: генерация белого шума                  \\
-          &   &     & 2: генерация белого шума симметрично относительно \\
-      & & & экватора    \\
-     mars & 0 & int & 1: инициализация модели для планеты Марс     \\ 
-%     \hline 
-    \end{longtable}
-\normalsize% возвращаем шрифт к нормальному
-\section{Очередной подраздел приложения} \label{AppendixB3}
-
-Нужно больше подразделов приложения!
-
-\section{И ещё один подраздел приложения} \label{AppendixB4}
-
-Нужно больше подразделов приложения!
 

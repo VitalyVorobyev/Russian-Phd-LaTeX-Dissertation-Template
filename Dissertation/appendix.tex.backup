@@ -1,0 +1,244 @@
+\input{Dissertation/appendixsetup}   % Предварительные настройки для правильного подключения Приложений
+\chapter{Формализм с учетом CP-нарушения в смешивании D-мезонов} \label{app:full_formalism}
+Обозначим амплитуду перехода \dn (\dnbar) в конечное состояние $f$ через \ad\ (\adbar).  В случае распада в три бесспиновые частицы, амплитуда \dn зависит от двух кинематических параметров.  Мы будем использовать переменные Далица \mosq и \mtsq.  Плотность распределения Далица для распада \dn в отсутствие осцилляций $D$-мезонов равна
+\begin{equation}
+ \mcp\motsq = \left |\ad\motsq\right |^2.
+\end{equation}
+Учет осцилляции $D$-мезонов изменяет это выражение следующим образом:
+\begin{equation}\label{eq:pd}
+  \mcp^{\prime}\mottsq = 
+    \left |\kappd\ad + i\frac{q}{p}\sigmd \adbar\right |^2, 
+\end{equation}
+где $t$ обозначает время между рождением и распадом.  Зависимость \ad\ и \adbar\ от переменных Далица в уравнении~\eqref{eq:pd} опущена.  Временная зависимость задается выражением
+\begin{equation}\label{eq:kapsig}
+   \kappd + i\sigmd = e^{\frac{\gamdt}{2}(-1+x_D-iy_D)}. 
+\end{equation}
+Проинтегрировав выражение~\eqref{eq:kapsig} по времени, получим
+\begin{equation}
+ \mcp^{\prime}\motsq=a_0\mcp + a_1r^{2}_{\cpconj}\mcpbar +
+                r_{\cpconj}\sqrt{\mcp\mcpbar}\left (C^+a_2+S^+a_3\right ),
+\end{equation}
+где
+\begin{equation}
+ r_{\cpconj}e^{i\alpha_{\cpconj}}=\frac{q}{p},\quad C^{\pm} + iS^{\pm} = e^{i\lbr\deld\pm\alpha_{\cpconj}\rbr},
+\end{equation}
+$\deld=\lbr\delta_D\motsq-\overline{\delta}_D\motsq\rbr$ --- разность сильных фаз между амплитудами распадов $D^0\to f$ и $\dnbar\to f$ и
+\begin{equation}
+  \begin{split}
+   a_0&=\frac{1}{2}\left (\frac{1}{1-y_D^2}+\frac{1}{1+x_D^2}\right )
+      =1+\frac{1}{2}\left (-x_D^2+y_D^2\right )+\mco\lbr x_D+y_D\rbr^3,\\
+   a_1&=\frac{1}{2}\left (\frac{1}{1-y_D^2}-\frac{1}{1+x_D^2}\right )
+      =\frac{1}{2}\left (x_D^2+y_D^2\right )+\mco\lbr x_D+y_D\rbr^3,\\
+   a_2&=\frac{y_D}{1-y_D^2}=y_D+\mco\lbr x_D+y_D\rbr^3,\\
+   a_3&=\frac{x_D}{1+x_D^2}=x_D+\mco\lbr x_D+y_D\rbr^3.
+  \end{split}
+ \end{equation}
+Соответствующие выражения для распадов \dnbar могут быть получены посредством подстановок
+$p\leftrightarrow q$ и $\mcp \leftrightarrow \mcpbar$:
+\begin{equation}
+ \mcpbar^{\prime}\motsq=a_0\mcpbar + a_1r^{-2}_{\cpconj}\mcp +
+                r^{-1}_{\cpconj}\sqrt{\mcp\mcpbar}\lbr C^-a_2+S^-a_3\rbr.
+\end{equation}
+
+Рассмотрим теперь распад пары $\dn\dnbar$, находящейся в когерентном состоянии с $\cconj=-1$ или $\cconj=+1$.  В предположении, что частица с индексом $1$ распадается первой, плотность распределения Далица с учетом осцилляций $D$-мезонов задается выражением
+\begin{equation}
+ \begin{split}
+  \mcp_{\mathrm{corr}}^{\cconj}&\lbr\lbr\mosq\rbr_1,\lbr\mtsq\rbr_1,\lbr\mosq\rbr_2,\lbr\mtsq\rbr_2\rbr \\
+   & = b^\cconj_0\left [\mcp_1\mcpbar_2+\mcpbar_1\mcp_2 
+     + 2 \cconj \sqrt{\mcp_1\mcpbar_1\mcp_2\mcpbar_2}\lbr C_1C_2+S_1S_2\rbr\right ]     \\
+   & + b^\cconj_1\left [\rcp^{-2}\mcp_1\mcp_2+\rcp^2\mcpbar_1\mcpbar_2 
+     + 2\cconj\sqrt{\mcp_1\mcpbar_1\mcp_2\mcpbar_2}\lbr C^+_1C^+_2-S^+_1S^+_2\rbr\right ]\\
+   & + b^\cconj_2\left [\sqrt{\mcp_2\mcpbar_2}C^+_2\lbr\rcp\mcpbar_1+\rcp^{-1}\mcp_1\rbr
+     + \cconj\sqrt{\mcp_1\mcpbar_1}C^+_1\lbr\rcp\mcpbar_2+\rcp^{-1}\mcp_2\rbr\right ]   \\
+   & + b^\cconj_3\left[\sqrt{\mcp_2\mcpbar_2}S^+_2\lbr\rcp\mcpbar_1-\rcp^{-1}\mcp_1\rbr
+     + \cconj\sqrt{\mcp_1\mcpbar_1}S^+_1\lbr\rcp\mcpbar_2-\rcp^{-1}\mcp_2\rbr\right ],
+  \end{split}
+\end{equation}
+где
+\begin{equation}
+ \begin{split}
+  b_0^\cconj&=\frac{1}{2}\left [\frac{1+\cconj y_D^2}{\lbr 1-y_D^2\rbr^2}+\frac{1-\cconj x_D^2}{\lbr 1+x_D^2\rbr^2}\right ]
+  \approx a_0+\frac{\cconj+1}{2}\lbr -x_D^2+y_D^2\rbr,\\
+  b_1^\cconj&=\frac{1}{2}\left [\frac{1+\cconj y_D^2}{\lbr 1-y_D^2\rbr^2}-\frac{1-\cconj x_D^2}{\lbr 1+x_D^2\rbr^2}\right ]
+  \approx \lbr\cconj+2\rbr a_1,\\
+  b_2^\cconj&=\frac{\lbr 1+\cconj\rbr y_D}{\lbr 1-y_D^2\rbr^2}\approx\lbr 1+\cconj\rbr a_2,\\
+  b_3^\cconj&=\frac{\lbr 1+\cconj\rbr x_D}{\lbr 1+x_D^2\rbr^2}\approx\lbr 1+\cconj\rbr a_3,
+ \end{split}
+\end{equation}
+и $\cconj=\pm 1$ для симметричного и антисимметричного случаев.  Заметим, что интерференционные члены сокращаются в случае  $\cconj=-1$ и удваиваются (по сравнению со случаем некогерентного распада) в случае $\cconj=+1$.
+
+Выражение для плотности распределения Далица распада \dkpp, если $D$-мезон рожден в процессе \bdk, с учетом осцилляций $D$-мезонов:
+\begin{equation}\label{eq:pBMixCP}
+  \begin{split}
+   \mcp^{\prime}_{B^{\pm}}\lbr\mpmsq,\mmpsq\rbr&=
+     a_0\left [\mcp+r_B^2\mcpbar+2\sqrt{\mcp\mcpbar}\lbr x_BC+y_BS\rbr\right ]\\
+   &+a_1\left [\rcp^{\pm 2}\mcpbar+r\rcp^{\mp 2}r_B^2\mcp + 
+     2\sqrt{\mcp\mcpbar}\lbr x_{B^{\pm}}^{\pm}C^{\pm}-
+                             y_{B^{\pm}}^{\pm}S^{\pm}\rbr\right ]\\
+   &+a_2\left [x_{B^{\pm}}^{\pm}\lbr \rcp^{\pm 1}\mcpbar+\rcp^{\mp 1}\mcp\rbr+
+     \sqrt{\mcp\mcpbar}\lbr \rcp^{\pm 1}+
+                            \rcp^{\mp 1}r_B^2\rbr C^{\pm}\right ]\\
+   &+a_3\left [y_{B^{\pm}}^{\pm}\lbr \rcp^{\pm 1}\mcpbar-\rcp^{\mp 1}\mcp\rbr+
+     \sqrt{\mcp\mcpbar}\lbr \rcp^{\pm 1}-
+                            \rcp^{\mp 1}r_B^2\rbr S^{\pm}\right ],
+  \end{split}
+ \end{equation}
+где $x_B^{\pm}=r_B\cos{\lbr \delta_B\pm\gphi\pm\alcp\rbr}$, 
+    $y_B^{\pm}=r_B\sin{\lbr \delta_B\pm\gphi\pm\alcp\rbr}$.
+
+\chapter{Процедура проведения численных экспериментов методом Монте-Карло} \label{app:toy-mc}
+В главе~\ref{chapt2} описаны результаты численных экспериментов, полученные с помощью описанной в этом приложении процедуры. 
+
+При времяинтегрированных измерениях, наблюдаемой величиной является количество событий $N_i$, попавших в область фазового пространства с индексом $i$ (будем считать, что индекс $i$ учитывает все дискретные параметры, в том числе, например, аромат).  Для нахождения значений физических параметров используется метод максимального правдоподобия с функцией правдоподобия~\mcl:
+\begin{equation}
+ -2\ln\mcl = -2\sum\limits_i{\ln P\lbr N_i, \left< N_i\right> \rbr},
+\end{equation}
+где $P\lbr N_i, \left< N_i\right> \rbr$ обозначает функцию распределения Пуассона для $N_i$ наблюдаемых событий при ожидаемой величине $\left< N_i\right>$.  Если целью численного эксперимента является оценка статистической неопределенности, то значения $N_i$ являются случайными величинами, подчиняющимися распределению Пуассона для ожидаемых значений $\left< N_i\right>$.  Среднеквадратичное отклонение найденных значений физических величин при многократном повторении численного эксперимента используется для оценки статистической неопределенности.
+
+В случае изучения систематических смещений во времяинтегрированных измерениях, величины $N_i$ вычисляются с помощью точных формул и фиксируются (что соответствует случаю бесконечной статистики).  Величины $\left< N_i\right>$, используемые при определении значений физических параметров, вычисляются с помощью упрощенных моделей (например, не учитывающих осцилляции $D$-мезонов).  Полученные отличие восстановленных значений физических параметров от используемых при вычислении величин $N_i$, используются в качестве оценки систематического смещения.
+
+При времязависимых измерениях, мы имеем дело с плотностями вероятности $p_i(t)$ и набором из $N$ событий, причем событие $j\in\left[ 1, N\right]$ представляет собой пару $\lbr t_j, i_j \rbr$.  Функция правдоподобия в этом случае имеет вид
+\begin{equation}
+ \mcl = \prod\limits_{j=1}^{N}p_{i_j}\lbr t_j\rbr.
+\end{equation}
+
+
+\chapter{Кинематическая реконструкция вершин распадов} \label{app:kine-rec}
+Алгоритм кинематической реконструкции распадов, упомянутый в пункте~\ref{sec:kinerec}, реализован с помощью метода наименьших квадратов.  Кинематические ограничения (например, требование на инвариантную массу частиц или требование привязки к области места встречи пучков) учитываются с помощью множителей Лагранжа.
+
+Предполагая, что кинематические ограничения заданы в виде $r$ уравнений в форме $\Hbf\lbr\albf,\vbf\rbr=0$, функцию $\chi^2$, которую минимизирует искомая вершина распада, в общем виде можно записать в следующем виде~\cite{Avery}:
+\begin{equation}
+ \chi^2 = \lbr \albf - \albf_0 \rbr^T\Vbf_{\albf_0}^{-1}\lbr \albf - \albf_0 \rbr 
+        + \lbr  \vbf -  \vbf_0 \rbr^T\Vbf_{ \vbf_0}^{-1}\lbr  \vbf -  \vbf_0 \rbr 
+        + \lambda^T\Hbf \lbr \albf, \vbf \rbr,
+\end{equation}
+где $\albf = \lbr \albf_1, \albf_2, \dots, \albf_n \rbr$ обозначает вектор параметров $n$ треков и $\vbf = \lbr v_1,v_2,v_3 \rbr$ обозначает координату искомой точки пересечения всех треков,  $\albf_0$ и $\vbf_0$ соответствуют начальным значениям, $\Vbf_{\albf_0}$ и $\Vbf_{\vbf_0}$ --- матрицы ковариаций.
+
+Уравнения $\Hbf\lbr\albf,\vbf\rbr=0$, вообще говоря, нелинейны.  Чтобы решения задачи в общем случае, эти уравнения линеаризуют, раскладывая в ряд вблизи текущих значений $\albf_A$ и $\vbf_A$:
+\begin{equation}
+\begin{split}
+ 0 & = \Hbf\lbr\albf_A,\vbf_A\rbr 
+   + \left.\frac{\partial\Hbf\lbr\albf,\vbf\rbr}{\partial\albf}\right|_{\albf_A,\vbf_A}\lbr \albf - \albf_A \rbr
+   + \left.\frac{\partial\Hbf\lbr\albf,\vbf\rbr}{\partial \vbf}\right|_{\albf_A,\vbf_A}\lbr  \vbf -  \vbf_A \rbr\\
+   & = \mathbf{d} + \mathbf{D}\delta\albf + \mathbf{E}\delta\vbf.
+\end{split}
+\end{equation}
+
+При таком разложении функция $\chi^2$ принимает вид
+\begin{equation}\label{eq:chisq-kine-fit}
+ \chi^2 = \lbr \albf - \albf_0 \rbr^T\Vbf_{\albf_0}^{-1}\lbr \albf - \albf_0 \rbr 
+        + \lbr  \vbf -  \vbf_0 \rbr^T\Vbf_{ \vbf_0}^{-1}\lbr  \vbf -  \vbf_0 \rbr 
+        + \lambda^T\lbr \mathbf{d} + \mathbf{D}\delta\albf + \mathbf{E}\delta\vbf\rbr.
+\end{equation}
+Минимум выражения~\eqref{eq:chisq-kine-fit} находится методом последовательных приближений.  Детальное описание процедуры кинематической реконструкции и рассмотрение различных кинематических ограничений приведено в работе~\cite{Avery}.
+
+\chapter{Параметризация временного разрешения в эксперименте Belle} \label{app:time-resolution}
+Введенная в уравнении~\eqref{eq:psig_dt_cpv} (пункт~\ref{sec:time-resolution}) функция $\mcr\lbr\dt\rbr$, описывающая временное разрешение для верно реконструированных событий, имеет вид
+\begin{equation}
+ \begin{split}
+ \mcr\lbr\dt\rbr & = \iiint\limits_{-\infty}^{\phantom{--}+\infty}
+     \mcr_{\det}^{\rec}\lbr\dt    -\dt\prm\rbr
+     \mcr_{\det}^{\asc}\lbr\dt\prm-\dt\pprm\rbr \\
+     & \times \mcr_{\np}\lbr\dt\pprm-\dt\ppprm\rbr
+              \mcr_{\kin}\lbr\dt\ppprm\rbr
+     \dd\dt\prm \dd\dt\pprm \dd\dt\ppprm.
+ \end{split}
+\end{equation}
+Функции $\mcr_{\det}^{\rec}$ и $\mcr_{\det}^{\asc}$ описывают детекторное разрешение при измерении вершин сигнального и помечающего $B$-мезонов, соответственно.  Функция $\mcr_{\np}$ описывает смещение при определении вершины помечающего $B$-мезона, возникающее из-за использования заряженных частиц из распадов долгоживущих частиц, таких как \ks- или $D$-мезоны.  Функция $\mcr_{\kin}$ описывает искажение распределения \dt, возникающее в результате использования приближения о том, что $B$-мезоны покоятся в \cms.
+
+\paragraph{Детекторное разрешение. } Детекторное разрешение для вершин, реконструированных с использованием \emph{двух и более треков}, параметризовано следующим образом:
+\begin{equation}\label{eq:rdet-mult}
+ \mcr_{\det}^{\rmq,\mathrm{mult}}\lbr \delta z_{\rmq} \rbr = 
+  G\lbr \delta z_{\rmq}; \lbr s_{\rmq}^0 + s_{\rmq}^1h \rbr \sigma_{z_{\rmq}} \rbr
+ ,\quad \rmq \in \{\rec,\asc\}.
+\end{equation}
+Здесь $\delta z_{\rmq} = z_{\rmq}^{\fit} - z_{\rmq}^{\gen}$ обозначает ошибку при реконструкции вершины распада $B$-мезона; $G$ обозначает функцию Гаусса; $\sigma_{z_{\rmq}}$ обозначает оценку неопределенности определения вершины распада, которую возвращает алгоритм кинематической реконструкции; $h$ обозначает величину $\chi^2$, возвращаемую алгоритм кинематической реконструкции, из которой изъято слагаемое, отвечающее за привязку к области взаимодействия пучков; $s_{\rmq}^0$ и $s_{\rmq}^1$ --- коэффициенты.  Заметим, что параметры $\sigma_{z_{\rmq}}$ и $h$ определяются независимо для каждого события на основе результата алгоритма алгоритма кинематической реконструкции.  Если вместо величины $h$ использовать полное значение $\chi^2$, то возникает нежелательная корреляция между $\chi^2$ и измеренным значением \dt.  
+При определении функций $\mcr_{\det}^{\rmq,\mathrm{mult}}$ согласно выражению~\eqref{eq:rdet-mult}, коэффициенты $s_{\rmq}^0$ и $s_{\rmq}^1$ не зависят от конечного состояния и могут быть определены с помощью экспериментальных данных.
+
+Характерное пространственное разрешение при определении координаты многотрековой вершины сигнального $B$-мезона составляет приблизительно $70~\mum$.  Для помечающего $B$-мезона (без учета влияния треков из вторичных вершин) эта величина составляет приблизительно $100~\mum$.
+
+Если вершина распада восстанавливается с использованием единственного трека (посредством проецирования траектории на область взаимодействия пучков), то величина $h$ не имеет смысла, а детекторное разрешение параметризуется следующим образом:
+\begin{equation}
+ \mcr^{\rmq,\mathrm{sing}}_{\det}\lbr \delta z_{\rmq} \rbr = 
+   \lbr 1 - f_{\rmq}^{\tail} \rbr G\lbr \delta z_{\rmq}; s_{\rmq}^{\main}\sigma_{z_{\rmq}} \rbr
+   + f_{\rmq}^{\tail} G\lbr \delta z_{\rmq}; s_{\rmq}^{\tail}\sigma_{z_{\rmq}} \rbr.
+\end{equation}
+
+\paragraph{Влияние вторичных вершин. } Вид функции $\mcr_{\np}$ определялся с помощью событий специального моделирования.  При генерировании этих событий время жизни долгоживущих частиц в продуктах распада $B$-мезонов было установлено равным нулю.  Изучение полученного разрешения и сравнение его с разрешением при обычной процедуре моделирования позволило определить вид функции $\mcr_{\np}$:
+\begin{equation}
+ \begin{split}
+  \mcr_{\np}\lbr z_{\asc} \rbr & = f_{\delta}\delta^{\mathrm{Dirac}} \lbr z_{\asc} \rbr 
+  + \lbr 1 - f_{\delta} \rbr \left[ f_{\rmp} E_{\rmp}\lbr z_{\asc};\cbgups\tau_{\np}^{\rmp} \rbr\right. \\
+  &                      + \left.\lbr 1-f_{\rmp} \rbr E_{\rmn}\lbr z_{\asc};\cbgups\tau_{\np}^{\rmn} \rbr \right],
+ \end{split}
+\end{equation}
+где $\delta^{\mathrm{Dirac}}$ обозначает функцию Дирака, $f_{\delta}$ и $f_{\rmp}$ --- постоянные коэффициенты и
+\begin{equation}
+ E_{\rmp}\lbr x;\tau\rbr = 
+ \begin{cases}
+  \frac{1}{\tau}e^{-\frac{x}{\tau}}, & x>0     \\
+  0,                                 & x\leq 0
+ \end{cases}
+ ,\quad
+ E_{\rmn}\lbr x;\tau\rbr = 
+ \begin{cases}
+  0,                                 & x>0    \\
+  \frac{1}{\tau}e^{\frac{x}{\tau}},  & x\leq 0
+ \end{cases}
+ .
+\end{equation}
+Значения коэффициентов $f_{\delta}$ и $f_{\rmp}$ различаются для случаев, когда при определения аромата $B$-мезона используется высокоэнергичный лептон и когда такого лептона нет.
+
+Если вершина помечающего $B$-мезона восстанавливается с использованием нескольких треков, что эффективные времена жизни $\tau_{\np}^{\rmp}$ и $\tau_{\np}^{\rmn}$ задаются с использованием результатов кинематической реконструкции:
+\begin{equation}
+ \begin{split}
+  & \tau_{\np,\mathrm{mult}}^{\rmp} = s_{\np}^{\mathrm{global}}\left[
+     \tau_{\rmp}^{0}
+   + \tau_{\rmp}^{1} \frac{\sigma_{z_{\asc}}}{\cbgups} 
+   + \tau_{\rmp}^{2} h_{\asc}
+   + \tau_{\rmp}^{3} \frac{\sigma_{z_{\asc}}}{\cbgups} h_{\asc}
+   \right],\\
+  & \tau_{\np,\mathrm{mult}}^{\rmn} = s_{\np}^{\mathrm{global}}\left[
+     \tau_{\rmn}^{0}
+   + \tau_{\rmn}^{1} \frac{\sigma_{z_{\asc}}}{\cbgups} 
+   + \tau_{\rmn}^{2} h_{\asc}
+   + \tau_{\rmn}^{3} \frac{\sigma_{z_{\asc}}}{\cbgups} h_{\asc}
+   \right].
+ \end{split}
+\end{equation}
+В случае однотрековых вершин используется упрощенная модель с постоянными эффективными временами $\tau_{\np}^{\rmp,\mathrm{sing}}$ и $\tau_{\np}^{\rmn,\mathrm{sing}}$.  
+
+Все параметры, описывающие влияние треков из вторичных вершин распада помечающего $B$-мезона, определяются с помощью событий моделирования.  Влияние треков из вторичных вершин приводит к увеличению характерного разрешения для многотрековых вершин помечающего $B$-мезона приблизительно до $130~\mum$.  Характерное разрешение для однотрековых вершин составляет приблизительно $270~\mum$.
+
+\paragraph{Учет кинематического приближения. } Предположение о том, что $B$-мезоны в \cms покоятся, позволяет использовать приближение~\eqref{eq:kine-appr}, однако приводит к необходимости учитывать это приближение в функции разрешения.  Отличие \dt, полученного с помощью этого приближения от верного значения разности собственных времен распадов $B$-мезонов задается выражением
+\begin{equation}
+\begin{split}
+ x & = \dt - \dt_{\mathrm{true}} = \frac{z_{\rec} - z_{\asc}}{\cbgups} - \lbr t_{\rec} - t_{\asc} \rbr \\
+   & = \frac{\bg_{\brec}}{\bg_{\ups}}t_{\rec} + \frac{\bg_{\basc}}{\bg_{\ups}}t_{\asc} 
+     = \lbr \ak + \ck - 1 \rbr t_{\rec} - \lbr \ak - \ck - 1 \rbr t_{\asc},
+\end{split}
+\end{equation}
+где 
+\begin{equation}
+ \ak = \frac{E_{\brec}^{\cms}}{m_B},\quad 
+ \ck = \frac{p_{\brec}^{\cms}\cos{\theta_{\brec}^{\cms}}}{\lbr\beta\rbr_{\ups}m_B}
+\end{equation}
+и $E_{\brec}^{\cms}\approx 5.292\gev$, $p_{\brec}^{\cms}\approx 0.340\gevc$ и $\theta_{\brec}^{\cms}$ обозначают энергию, импульс и угол относительно оси пучков реконструированного $B$-мезона в \cms. 
+
+Дальнейшее рассмотрение позволяет получить выражение для функции~$\mcr_{\kin}$~\cite{markusphd}:
+\begin{equation}
+ \mcr_{\kin}\lbr x\rbr = 
+ \begin{cases}
+  E_{\rmp}\lbr x - (\ak-1)\dt_{\mathrm{true}} + \ck|\dt_{\mathrm{true}}|; \btau|\ck| \rbr,
+  & \cos\theta_{\brec}^{\cms}>0, \\
+  \delta^{\mathrm{Dirac}}\lbr x - (\ak-1)\dt_{\mathrm{true}} \rbr,                        
+  & \cos\theta_{\brec}^{\cms}=0, \\
+  E_{\rmn}\lbr x - (\ak-1)\dt_{\mathrm{true}} + \ck|\dt_{\mathrm{true}}|; \btau|\ck| \rbr,
+  & \cos\theta_{\brec}^{\cms}<0.
+ \end{cases}
+\end{equation}
+Свертка точной плотности вероятности $\mcp\lbr\dt_{\mathrm{true}}\rbr$ с функцией $\mcr_{\kin}\lbr x = \dt - \dt_{\mathrm{true}}\rbr$ позволяет получить ожидаемую плотность вероятности для параметра \dt.
+
+Функция $\mcr_{\kin}$ не содержит свободных параметров, однако использование кинематического приближения~\eqref{eq:kine-appr} приводит к увеличению пространственного разрешения приблизительно на $35~\mum$.
+
+

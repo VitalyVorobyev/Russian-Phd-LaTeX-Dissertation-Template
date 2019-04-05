@@ -57,6 +57,7 @@ ENTRY
   { address
     annote
     author
+    collaboration
     booktitle
     bookauthor
     chapter
@@ -1058,6 +1059,18 @@ FUNCTION {format.tr.number}
 }
 
 FUNCTION {author.before}
+{
+  author empty$
+    'skip$
+    {author num.names$ #4 <
+      {format.authors output
+       new.sentence}
+      'skip$
+    if$}
+  if$
+}
+
+FUNCTION {collaboration.before}
 {
   author empty$
     'skip$
